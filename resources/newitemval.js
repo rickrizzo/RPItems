@@ -27,7 +27,7 @@ function validate(formObj) {
   var e = document.forms["addForm"]["phone"].value;
   var f = document.forms["addForm"]["Email"].value;
   var s=document.getElementById("mySelect");
-  if (s.options[s.selectedIndex].text == "None" ){
+  if (s.options[s.selectedIndex].text == "" ){
     document.getElementById("select").style.color = "#ff0000";
     a++;
   }
