@@ -2,138 +2,214 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>RPITEM SUBMIT</title>    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>   
+    
+	<!--CSS-->
     <link href="itemsell.css" rel="stylesheet" type="text/css"/>
-    <script>
-      function validate() {
-      }
-
-    </script>
-    <style>
-      #box{
+	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
+	<style>
+      body{
         margin: auto;
         width: 1000px
       }
-      #menu{margin: 5px}
+	  
+      #menu{
+	    margin: 5px
+	  }
+	  
+	  form{
+	    margin-top: 100px;
+	  }
+	  
       .forform{
         margin:10px;
         line-height:35px;
       }
+	  
       .inside{
         margin: 5px 40px 10px 30px;
       }
+	  
       #up{
         text-align:right;
         margin: 30px 70px 40px 10px;
       }
-      ul {padding: 0;margin: 0;list-style: none}
-      a {text-decoration:none; color:#000;}
-      a:hover {color: #888888}
-      ul li{float: left; text-align:center;width:185px;height:30px;display:inline-block;position:relative;line-height:40px;border-style:solid;margin:3px }
-      li ul{display:none;position:absolute;top:100%;}
-      li ul li{text-align:center;background-color:#FFFFFF;width:180px;line-height:30px;margin:5px 0px 0px 0px}
-      li:hover ul{display:block}
-      #body{z-index: 1;
-        margin: 2px}
+	  
+      ul {
+	    padding: 0;
+		margin: 0;
+		list-style: none;
+      }
+      
+	  a {
+	    text-decoration:none;
+		color:#000;
+	  }
+      
+	  a:hover {
+	    color: #888888;
+	  }
+      
+	  ul li{
+	    float: left; 
+		text-align:center;
+		width:185px;
+		height:30px;
+		display:inline-block;
+		position:relative;
+		line-height:40px;
+		border-style:solid;
+		margin:3px;
+      }
+      
+	  li ul{
+	    display:none;
+		position:absolute;
+		top:100%;
+	  }
+      
+	  li ul li{
+	    text-align:center;
+		background-color:#FFFFFF;
+		width:180px;
+		line-height:30px;
+		margin:5px 0px 0px 0px;
+	  }
+      
+	  li:hover ul{
+	    display:block;
+	  }
+      
+	  #body{
+	    z-index: 1;
+        margin: 2px;
+	  }
     </style>
+	
+	<!--Scripts-->
+    <script>
+      function validate() {
+      }
+    </script>
+    
   </head>
   <body>
-    <div id ="box">
-    <div id="head">
+	<!--Header-->
+    <header>
       <h1>RPITEM</h1>
       <h2>Seller</h2>
-    </div>
-    <!-- Menu -->
-    <div id ="menu">
+    </header>
+	
+    <!--Nav Bar-->
+    <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>Department
+        <!--Home-->
+		<li><a href="index.html">Home</a></li>
+		
+		<!--Department-->
+        <li>
+		  Department
           <ul>
-            <li><a href="index.html">Books</a></li>
-            <li><a href="index.html">Clothes</a></li>
-            <li><a href="index.html">Electronics</a></li>
-            <li><a href="index.html">Games</a></li>
-            <li><a href="index.html">Movies, Music</a></li>
-            <li><a href="index.html">Tool</a></li>
-            <li><a href="index.html">Others</a></li>
+            <li><a href = "#">Books</a></li>
+            <li><a href = "#">Clothes</a></li>
+            <li><a href = "#">Electronics</a></li>
+            <li><a href = "#">Games</a></li>
+            <li><a href = "#">Movies</a></li>
+			<li><a href = "#">Music</a></li>
+            <li><a href = "#">Tool</a></li>
+            <li><a href = "#">Others</a></li>
           </ul>
-          </li>
-        <li>Your Account
+        </li>
+		
+		<!--Account-->
+        <li>
+		  Your Account
           <ul>
           <li><a href = "profile.html">Information</a></li>
           <li><a href = "index.html">Buy</a></li>
-          <li><a href="index.html">Sell</a></li>
+          <li><a href = "index.html">Sell</a></li>
           </ul>
         </li>
+		
+		<!--Cart-->
         <li><a href="cart.html">Cart</a></li>
-        <li>Contect Us</li>
+		
+		<!--Contact-->
+        <li>Contact Us</li>
       </ul>
-    </div>
-
-    <div id="body"> 
-      <form id="addForm" name="addForm" action="#" method="post" enctype="multipart/form-data" onsubmit="return validate();">
-        <fieldset class="forform"> 
-          <legend>Item Information</legend>
-          <div class= "inside">
+    </nav>
+	
+	<!--Input Data-->
+    <form id="addForm" name="addForm" action="#" method="post" enctype="multipart/form-data" onsubmit="return validate();">
+      <fieldset class="forform"> 
+        <legend>Item Information</legend>
+        <div class= "inside">
           <div class="formData">
-              <label id = "select" class="field">Category:</label>
-            <div>
-              <select id = "mySelect">
-                <option>None</option>
-                <option>Books</option>
-                <option>Clothes</option>
-                <option>Electronics</option>
-                <option>Games</option>
-                <option>Movies, Music</option>
-                <option>Tool</option>
-                <option>Others</option>
-                <!-- add more Category -->
-              </select>
-            </div>
-                          
+            <label id = "select" class="field">Category:</label>
+            <select id = "mySelect">
+              <option>None</option>
+              <option>Books</option>
+              <option>Clothes</option>
+              <option>Electronics</option>
+              <option>Games</option>
+              <option>Movies</option>
+			  <option>Music</option>
+              <option>Tool</option>
+              <option>Others</option>
+            </select>
+            <br />
             <label id = "ItemName"class="field">Item Name:</label>
-            <div class="value"><input type="text" size="60" value="" name="Item" id="Item"/></div>
+            <div class="value">
+			  <input type="text" size="60" value="" name="Item" id="Item"/>
+			</div>
             
             <label id = "price" class="field">Price:</label>
-            <div class="value"><input type="text" size="60" value="" name="Price" id="Price"/></div>
+            <div class="value">
+			  <input type="text" size="60" value="" name="Price" id="Price"/>
+			</div>
             
             <label id = "Must" class="field">Description:</label>
             <div class="value">
               <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
             </div>
-                <label for="file">Item Picture:</label>
-                  <input type="file" name="file" id="file" /> 
-          </div>
-            </fieldset>
-
-          <fieldset class="forform"> 
-          <legend>Contect Information</legend>
-          <div class= "inside">
-            <label  id = "Must" class="field">Phone:</label>
-            <div class="value"><input type="text" size="60" value="" name="org" id="org"/></div>
             
-            <label id = "Must" class="field">Email:</label>
-            <div class="value"><input type="text" size="60" value="" name="pseudonym" id="pseudonym"/></div>
+			<label for="file">Item Picture:</label>
+            <input type="file" name="file" id="file" /> 
           </div>
+
+          <fieldset class="forform"> 
+            <legend>Contect Information</legend>
+            <div class= "inside">
+              
+			  <label  id = "Must" class="field">Phone:</label>
+              <div class="value">
+			    <input type="text" size="60" value="" name="org" id="org"/>
+			  </div>
+            
+              <label id = "Must" class="field">Email:</label>
+              <div class="value">
+			    <input type="text" size="60" value="" name="pseudonym" id="pseudonym"/>
+			  </div>
+			  
+            </div>
           </fieldset>
 
           <fieldset class="forform"> 
-          <legend>Additional Information</legend>
-          <div class= "inside">
-            <label class="field">Additional Information(option):</label>
+            <legend>Additional Information</legend>
+            <div class= "inside">
+              <label class="field">Additional Information(option):</label>
               <div class="value">
-              <textarea rows="4" cols="70" name="description" id="Additional" placeholder="Please type here"></textarea>
+                <textarea rows="4" cols="70" name="description" id="Additional" placeholder="Please type here"></textarea>
+              </div>
             </div>
-          </div>
           </fieldset>
 
-            <div id = "up">
+          <div id = "up">
             <input type="submit" value="Submit" id="save" name="save" style="font-size: 50px;"/>
           </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+        </div>
+      </fieldset>
+    </form>
+	
   </body>
 </html>
