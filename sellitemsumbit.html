@@ -6,29 +6,6 @@
     <link href="itemsell.css" rel="stylesheet" type="text/css"/>
     <script>
       function validate() {
-        /*var s=document.getElementById("mySelect");
-        if (s.options[s.selectedIndex].text == "None" ){
-          document.getElementById("select").style.color = "#ff0000";
-           c++;
-           return false;
-        }*/
-        int c = 0;
-        var i = document.forms["addForm"]["Item"].value;
-        var p = document.forms["addForm"]["Price"].value;
-        if (i == "" || i == null) {
-          document.getElementById("ItemName").style.color = "#ff0000";
-          c++;
-        }
-        if (p == "" || p == null) {
-          document.getElementById("price").style.color = "#ff0000";
-           c++;
-        }
-        if (c != 0){
-          return false;
-        }
-        else{
-          return true;
-        }
       }
 
     </script>
