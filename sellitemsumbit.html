@@ -32,17 +32,72 @@
       }
 
     </script>
+    <style>
+      #box{
+        margin: auto;
+        width: 1000px
+      }
+      #menu{margin: 5px}
+      .forform{
+        margin:10px;
+        line-height:35px;
+      }
+      .inside{
+        margin: 5px 40px 10px 30px;
+      }
+      #up{
+        text-align:right;
+        margin: 30px 70px 40px 10px;
+      }
+      ul {padding: 0;margin: 0;list-style: none}
+      a {text-decoration:none; color:#000;}
+      a:hover {color: #888888}
+      ul li{float: left; text-align:center;width:185px;height:30px;display:inline-block;position:relative;line-height:40px;border-style:solid;margin:3px }
+      li ul{display:none;position:absolute;top:100%;}
+      li ul li{text-align:center;background-color:#FFFFFF;width:180px;line-height:30px;margin:5px 0px 0px 0px}
+      li:hover ul{display:block}
+      #body{z-index: 1;
+        margin: 2px}
+    </style>
   </head>
   <body>
+    <div id ="box">
     <div id="head">
       <h1>RPITEM</h1>
       <h2>Seller</h2>
     </div>
+    <!-- Menu -->
+    <div id ="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>Department
+          <ul>
+            <li><a href="index.html">Books</a></li>
+            <li><a href="index.html">Clothes</a></li>
+            <li><a href="index.html">Electronics</a></li>
+            <li><a href="index.html">Games</a></li>
+            <li><a href="index.html">Movies, Music</a></li>
+            <li><a href="index.html">Tool</a></li>
+            <li><a href="index.html">Others</a></li>
+          </ul>
+          </li>
+        <li>Your Account
+          <ul>
+          <li><a href = "profile.html">Information</a></li>
+          <li><a href = "index.html">Buy</a></li>
+          <li><a href="index.html">Sell</a></li>
+          </ul>
+        </li>
+        <li><a href="cart.html">Cart</a></li>
+        <li>Contect Us</li>
+      </ul>
+    </div>
 
     <div id="body"> 
-      <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate();">
-        <fieldset> 
+      <form id="addForm" name="addForm" action="#" method="post" enctype="multipart/form-data" onsubmit="return validate();">
+        <fieldset class="forform"> 
           <legend>Item Information</legend>
+          <div class= "inside">
           <div class="formData">
               <label id = "select" class="field">Category:</label>
             <div>
@@ -69,36 +124,39 @@
             <div class="value">
               <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
             </div>
-
-            <!-- <form action="upload_picture.php" method="post" enctype="multipart/form-data"> -->
-                <!-- <label for="file">Item Picture:</label> -->
-                  <!-- <input type="file" name="file" id="file" />  -->
-                  <!-- <input type="submit" name="submit" value="Upload" /> -->
-            <!-- </form> -->
+                <label for="file">Item Picture:</label>
+                  <input type="file" name="file" id="file" /> 
+          </div>
             </fieldset>
 
-          <fieldset> 
+          <fieldset class="forform"> 
           <legend>Contect Information</legend>
+          <div class= "inside">
             <label  id = "Must" class="field">Phone:</label>
             <div class="value"><input type="text" size="60" value="" name="org" id="org"/></div>
             
             <label id = "Must" class="field">Email:</label>
             <div class="value"><input type="text" size="60" value="" name="pseudonym" id="pseudonym"/></div>
+          </div>
           </fieldset>
 
-          <fieldset> 
+          <fieldset class="forform"> 
           <legend>Additional Information</legend>
+          <div class= "inside">
             <label class="field">Additional Information(option):</label>
               <div class="value">
               <textarea rows="4" cols="70" name="description" id="Additional" placeholder="Please type here"></textarea>
             </div>
+          </div>
           </fieldset>
 
-            
-            <input type="submit" value="Submit" id="save" name="save"/>
+            <div id = "up">
+            <input type="submit" value="Submit" id="save" name="save" style="font-size: 50px;"/>
+          </div>
           </div>
         </fieldset>
       </form>
     </div>
+  </div>
   </body>
 </html>
