@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>RPITEM SUBMIT</title>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <link href="itemsell.css" rel="stylesheet" type="text/css"/>
+    <script>
+      function validate() {
+        /*var s=document.getElementById("mySelect");
+        if (s.options[s.selectedIndex].text == "None" ){
+          document.getElementById("select").style.color = "#ff0000";
+           c++;
+           return false;
+        }*/
+        int c = 0;
+        var i = document.forms["addForm"]["Item"].value;
+        var p = document.forms["addForm"]["Price"].value;
+        if (i == "" || i == null) {
+          document.getElementById("ItemName").style.color = "#ff0000";
+          c++;
+        }
+        if (p == "" || p == null) {
+          document.getElementById("price").style.color = "#ff0000";
+           c++;
+        }
+        if (c != 0){
+          return false;
+        }
+        else{
+          return true;
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="head">
+      <h1>RPITEM</h1>
+      <h2>Seller</h2>
+    </div>
+
+    <div id="body"> 
+      <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate();">
+        <fieldset> 
+          <legend>Item Information</legend>
+          <div class="formData">
+              <label id = "select" class="field">Category:</label>
+            <div>
+              <select id = "mySelect">
+                <option>None</option>
+                <option>Books</option>
+                <option>Clothes</option>
+                <option>Electronics</option>
+                <option>Games</option>
+                <option>Movies, Music</option>
+                <option>Tool</option>
+                <option>Others</option>
+                <!-- add more Category -->
+              </select>
+            </div>
+                          
+            <label id = "ItemName"class="field">Item Name:</label>
+            <div class="value"><input type="text" size="60" value="" name="Item" id="Item"/></div>
+            
+            <label id = "price" class="field">Price:</label>
+            <div class="value"><input type="text" size="60" value="" name="Price" id="Price"/></div>
+            
+            <label id = "Must" class="field">Description:</label>
+            <div class="value">
+              <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
+            </div>
+
+            <!-- <form action="upload_picture.php" method="post" enctype="multipart/form-data"> -->
+                <!-- <label for="file">Item Picture:</label> -->
+                  <!-- <input type="file" name="file" id="file" />  -->
+                  <!-- <input type="submit" name="submit" value="Upload" /> -->
+            <!-- </form> -->
+            </fieldset>
+
+          <fieldset> 
+          <legend>Contect Information</legend>
+            <label  id = "Must" class="field">Phone:</label>
+            <div class="value"><input type="text" size="60" value="" name="org" id="org"/></div>
+            
+            <label id = "Must" class="field">Email:</label>
+            <div class="value"><input type="text" size="60" value="" name="pseudonym" id="pseudonym"/></div>
+          </fieldset>
+
+          <fieldset> 
+          <legend>Additional Information</legend>
+            <label class="field">Additional Information(option):</label>
+              <div class="value">
+              <textarea rows="4" cols="70" name="description" id="Additional" placeholder="Please type here"></textarea>
+            </div>
+          </fieldset>
+
+            
+            <input type="submit" value="Submit" id="save" name="save"/>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
