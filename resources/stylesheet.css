@@ -9,12 +9,14 @@ nav{
 }
 
 ul{
-	margin-left: 100px;
+	margin: 0 0 10px 75%;
 }
 
-li{
+nav li{
 	display: inline;
-	margin-right: 10px;
+	margin:0 10px;
+    list-style:none;
+    color: black;
 }
 
 header{
@@ -28,4 +30,7 @@ h1{
 	width: auto;
 }
 
-d
+img {
+    width: 400px;
+    height: 400px;
+}
