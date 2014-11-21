@@ -19,40 +19,36 @@ function validate(formObj) {
         alert("Please fix the following " + fix);
     }
 
-  /*var s=document.getElementById("mySelect");
-  if (s.options[s.selectedIndex].text == "None" ){
-    document.getElementById("select").style.color = "#ff0000";
-    c++;
-    return false;
-  }
-  int a = 0;
+  /*
+  var a = 0;
   var b = document.forms["addForm"]["Item"].value;
   var c = document.forms["addForm"]["Price"].value;
   var d = document.forms["addForm"]["description"].value;
   var e = document.forms["addForm"]["phone"].value;
   var f = document.forms["addForm"]["Email"].value;
+  var s=document.getElementById("mySelect");
+  if (s.options[s.selectedIndex].text == "None" ){
+    document.getElementById("select").style.color = "#ff0000";
+    a++;
+  }
   if (b == "" || b == null) {
     document.getElementById("ItemName").style.color = "#ff0000";
     a++;
   }
     if (c == "" || c == null) {
         document.getElementById("price").style.color = "#ff0000";
-        c++;
-    }
-    if (d == "" || d == null) {
-        document.getElementById("descripe").style.color = "#ff0000";
-        c++;
+        a++;
     }
     if (e == "" || e == null) {
         document.getElementById("phon").style.color = "#ff0000";
-        c++;
+        a++;
     }
     if (f == "" || f == null) {
         document.getElementById("emai").style.color = "#ff0000";
-        c++;
+        a++;
     }
 
-    if (c != 0){
+    if (a != 0){
         alert("You must enter a require filed");          
         return false;
     }
