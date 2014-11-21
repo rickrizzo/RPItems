@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>RPITEM SUBMIT</title>    
@@ -7,136 +7,94 @@
 	<!--CSS-->
     <link href="itemsell.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
+
+    <!--Scripts-->
+    <script type="text/javascript" src="resources/newitemval.js">
+        
+    </script>
+
+    <!--Style-->
     <style>
-     #box{
-       margin: auto;
-       width: 1000px
-     }
+      #box{
+        margin: auto;
+        width: 1000px
+      }
 	  
-     #menu{
-	   margin: 5px
-	 }
+      #menu{
+	    margin: 5px
+	  }
 	  
-	 form{
-	   margin-top: 100px;
-	 }
+	  form{
+	    margin-top: 100px;
+	  }
 	  
-     .forform{
-       margin:10px;
-       line-height:35px;
-     }
+      .forform{
+        margin:10px;
+        line-height:35px;
+      }
 	  
-     .inside{
-       margin: 5px 40px 10px 30px;
-     }
+      .inside{
+        margin: 5px 40px 10px 30px;
+      }
 	  
-     #up{
-       text-align:right;
-       margin: 30px 70px 40px 10px;
-     }
+      #up{
+        text-align:right;
+        margin: 30px 70px 40px 10px;
+      }
 	  
-     ul {
-	   padding: 0;
-	   margin: 0;
-	   list-style: none;
-     }
+      ul{
+	    padding: 0;
+	    margin: 0;
+	    list-style: none;
+      }
       
-	 a {
-	   text-decoration:none;
-	   color:#000;
-	 }
+	  a{
+	    text-decoration:none;
+	    color:#000;
+	  }  
       
-	 a:hover {
-	   color: #888888;
-	 }
+	  a:hover {
+	    color: #888888;
+	  } 
       
-	 ul li{
-	   float: left; 
-	   text-align:center;
-	   width:185px;
-	   height:30px;
-	   display:inline-block;
-	   position:relative;
-	   line-height:40px;
-	   border-style:solid;
-	   margin:3px;
-     }
+	  ul li{
+	    float: left; 
+	    text-align:center;
+	    width:185px;
+	    height:30px;
+	    display:inline-block;
+	    position:relative;
+	    line-height:40px;
+	    border-style:solid;
+	    margin:3px;
+      }
       
-	 li ul{
-	   display:none;
-       position:absolute;
-	   top:100%;
-	 }
+	  li ul{
+	    display:none;
+        position:absolute;
+	    top:100%;
+	  }
       
-	 li ul li{
-	   text-align:center;
-	   background-color:#FFFFFF;
-	   width:180px;
-	   line-height:30px;
-	   margin:5px 0px 0px 0px;
-	 }
+	  li ul li{
+	    text-align:center;
+	    background-color:#FFFFFF;
+	    width:180px;
+	    line-height:30px;
+	    margin:5px 0 0 0;
+	  }
       
-	 li:hover ul{
-	  display:block;
-	 }
+	  li:hover ul{
+	    display:block;
+	  }
       
-	 #body{
-	   z-index: 1;
-       margin: 2px;
-	 }
+	  #body{
+	    z-index: 1;
+        margin: 2px;
+	  }
     </style>
-	
-  <!--Scripts-->
-  <script>
-        function validate() {
-        /*var s=document.getElementById("mySelect");
-        if (s.options[s.selectedIndex].text == "None" ){
-          document.getElementById("select").style.color = "#ff0000";
-           c++;
-           return false;
-        }*/
-        int a = 0;
-        var b = document.forms["addForm"]["Item"].value;
-        var c = document.forms["addForm"]["Price"].value;
-        var d = document.forms["addForm"]["description"].value;
-        var e = document.forms["addForm"]["phone"].value;
-        var f = document.forms["addForm"]["Email"].value;
-        if (b == "" || b == null) {
-          document.getElementById("ItemName").style.color = "#ff0000";
-          a++;
-        }
-        if (c == "" || c == null) {
-          document.getElementById("price").style.color = "#ff0000";
-           c++;
-        }
-         if (d == "" || d == null) {
-          document.getElementById("descripe").style.color = "#ff0000";
-          c++;
-        }
-         if (e == "" || e == null) {
-          document.getElementById("phon").style.color = "#ff0000";
-          c++;
-        }
-         if (f == "" || f == null) {
-          document.getElementById("emai").style.color = "#ff0000";
-          c++;
-        }
-
-        if (c != 0){
-          alert("You must enter a require filed");          
-          return false;
-        }
-        else{
-          alert("Save successfully!")
-        }
-      return true;
-    }
-
-   </script>
-    
   </head>
   <body>
-	<!--Header-->
+    <!--Header-->
     <header>
       <h1>RPITEM</h1>
       <h2>Seller</h2>
@@ -180,41 +138,48 @@
         <li>Contact Us</li>
       </ul>
     </nav>
-	
+
 	<!--Input Data-->
-    <form id="addForm" name="addForm" action="#" method="post" enctype="multipart/form-data" onsubmit="return validate();">
+    <form id="addForm" name="addForm" action="#" method="post" enctype="multipart/form-data" onsubmit="return validate(this);">
       <fieldset class="forform"> 
         <legend>Item Information</legend>
         <div class= "inside">
           <div class="formData">
-            <label id = "select" class="field">Category:</label>
-            <select id = "mySelect">
-              <option>None</option>
-              <option>Books</option>
-              <option>Clothes</option>
-              <option>Electronics</option>
-              <option>Games</option>
-              <option>Movies</option>
-			  <option>Music</option>
-              <option>Tool</option>
-              <option>Others</option>
+            
+            <!--Catagory-->
+            <label for = "catagory" class="field">Category:</label>
+            <select id = "catagory" name="catagory">
+              <option value=""></option>
+              <option value="books">Books</option>
+              <option value="clothing">Clothing</option>
+              <option value="electronics">Electronics</option>
+              <option value="games">Games</option>
+              <option value="movies">Movies</option>
+			  <option value="movies">Music</option>
+              <option value="tools">Tool</option>
+              <option value="other">Others</option>
             </select>
             <br />
-            <label id = "ItemName"class="field">Item Name:</label>
+
+            <!--Name-->
+            <label for="item" class="field">Item Name:</label>
             <div class="value">
-			  <input type="text" size="60" value="" name="Item" id="Item"/>
+			  <input type="text" size="60" value="" name="item" id="item" />
 			</div>
             
+            <!--Price-->
             <label id = "price" class="field">Price:</label>
             <div class="value">
 			  <input type="text" size="60" value="" name="Price" id="Price"/>
 			</div>
             
-           <label id = "descripe" class="field">Description:</label>
+            <!--Description-->
+            <label id = "descripe" class="field">Description:</label>
             <div class="value">
               <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
             </div>
             
+            <!--Image-->
 			<label for="file">Item Picture:</label>
             <input type="file" name="file" id="file" /> 
           </div>
