@@ -2,13 +2,14 @@ body{
 	font-family: Segoe UI;
 	background-color:white;
 	padding: 0;
+    margin-left: 100px;
 }
 
 nav{
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 }
 
-ul{
+nav ul{
 	margin: 0 0 10px 75%;
 }
 
@@ -17,10 +18,12 @@ nav li{
 	margin:0 10px;
     list-style:none;
     color: black;
+    background-color:white;
 }
 
-header{
-	margin-left: 100px;
+nav li:hover{
+    margin: 0 9px;
+    border: 1px dashed black;
 }
 
 h1{
@@ -28,9 +31,48 @@ h1{
 	background-color: red;
 	padding: 10px;
 	width: auto;
+    margin: 0;
 }
 
 img {
     width: 400px;
     height: 400px;
+}
+
+#listing{
+    border: 1px solid blue;
+    height: 402px;
+    margin-top:40px;
+}
+
+#listing h4{
+    margin-top:180px;
+    float: left;
+}
+
+#listing p{
+    border: 1px solid green;
+}
+
+#itemImage{
+    border: 2px solid red;
+    float: left;
+}
+
+#itemInfo{
+    border: 3px solid yellow;  
+    float: left;
+    height: 100px;
+    margin: 50px 10px 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+#itemInfo ul{
+    margin: 0;
+    padding: 0;
+}
+
+#itemInfo li {
+    margin: 10px 0;
 }
