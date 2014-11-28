@@ -41,31 +41,21 @@ img {
 
 #listing{
     border: 1px solid blue;
-    height: 402px;
-    margin-top:40px;
+    margin: 40px 60px 0 0;
 }
 
-#listing h4{
-    margin-top:180px;
-    float: left;
-}
-
-#listing p{
-    border: 1px solid green;
-}
 
 #itemImage{
     border: 2px solid red;
     float: left;
+    margin: 0 50px 0 0;
 }
 
 #itemInfo{
-    border: 3px solid yellow;  
-    float: left;
     height: 100px;
-    margin: 50px 10px 0 auto;
+    margin: 40px auto 0 10px;
     list-style: none;
-    padding: 0;
+    padding: 10px;
 }
 
 #itemInfo ul{
@@ -75,4 +65,8 @@ img {
 
 #itemInfo li {
     margin: 10px 0;
+}
+
+#description{
+    padding: 20px 0 0 0;
 }
