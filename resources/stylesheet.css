@@ -34,19 +34,19 @@ h1{
     margin: 0;
 }
 
-img {
+#itemImage {
     width: 400px;
     height: 400px;
+    border-radius:10px;
 }
 
 #listing{
-    border: 1px solid blue;
+
     margin: 40px 60px 0 0;
 }
 
 
 #itemImage{
-    border: 2px solid red;
     float: left;
     margin: 0 50px 0 0;
 }
