@@ -12,26 +12,29 @@
 	$email = $_POST["email"];
 	
 	/*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
-	$link = mysqli_connect("localhost", "root", "root") or die("ERROR: " . mysqli_error($link));
+	$link = mysqli_connect("localhost", "root", "mysql44") or die("ERROR: " . mysqli_error($link));
 	
 	//Create DB
-	mysqli_query("CREATE DATABASE IF NOT EXISTS rpItems") or die (mysqli_error());
+	$dbQuery = "CREATE DATABASE IF NOT EXISTS rpItems";
+	$db = $link->query($dbQuery) or die ("DB ERROR: " . mysqli_error($link));
+	//$db->close();
 	
 	//Create Items Table
-	mysqli_select_db("rpItems") or die(mysqli_error());
-	mysqli_query("CREATE TABLE IF NOT EXISTS items (
+	$link->select_db("rpItems") or die(mysqli_error());
+	$link->query("CREATE TABLE IF NOT EXISTS items (
 		id INT NOT NULL AUTO_INCREMENT,
 		itemName VARCHAR(30) NOT NULL,
 		catagory VARCHAR(30) NOT NULL,
 		price FLOAT(3, 2) NOT NULL,
 		description VARCHAR(400),
-		PRIMARY KEY('id')
-	)") or die(mysqli_error());
+		PRIMARY KEY(id)
+	)") or die("TABLE ERROR: " . mysqli_error($link));
 	
 	//Insert Information
 	//$strSQL = "INSERT INTO items(";
 	
-	mysqli_close();
+	$link->close();
+	
 	
 	
 	//Pictures need to be added, I am just not sure how to store them yet
