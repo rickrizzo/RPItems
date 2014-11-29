@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Log In</title>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <link href="resources/stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Final%20Project%20Log%20In%20Page.js"></script>
+  </head>
+  <body>
+    <div id="bodyBlock">
+      <h1>RPItems</h1>
+      <div class="itemLogo">
+        <img src="RPItems%20Logo.jpg" id="itemImage" />
+      </div>
+      <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate(this);">
+        <fieldset> 
+          <legend>Log In</legend>
+          <div class="formData">
+                          
+            <label class="field" for="username">Username:</label>
+            <div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
+            
+            <label class="field" for="password">Password:</label>
+            <div class="value"><input type="text" size="60" value="" name="password" id="password"/></div>
+            
+            <input type="submit" value="Submit" id="Submit" name="Submit"/>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
