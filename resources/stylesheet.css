@@ -70,3 +70,81 @@ h1{
 #description{
     padding: 20px 0 0 0;
 }
+
+#box{
+	margin: auto;
+    width: 1000px
+}
+	  
+#menu{
+	margin: 5px
+}
+	  
+form{
+	margin-right: 40px;
+}
+	  
+.forform{
+    margin:10px;
+    line-height:35px;
+}
+	  
+.inside{
+	margin: 5px 40px 10px 30px;
+}
+	  
+#up{
+	text-align:right;
+    margin: 30px 70px 40px 10px;
+}
+
+#navbar{
+	position:fixed;	
+	right: 0;
+	top: 25%;
+}
+
+#navbar ul{
+	padding: 0;
+	margin: 0;
+    list-style: none;
+}
+      
+#navbar a{
+    text-decoration:none;
+    color:#000;
+}  
+      
+#navbar a:hover {
+    color: #888888;
+} 
+      
+#navbar ul li{
+    float: left; 
+    text-align:center;
+    width:185px;
+    height:30px;
+    display:inline-block;
+    position:relative;
+    line-height:40px;
+    border-style:solid;
+    margin:3px;
+}
+      
+#navbar li ul{
+    display:none;
+    position:absolute;
+    top:100%;
+}
+      
+#navbar li ul li{
+	text-align:center;
+	background-color:#FFFFFF;
+	width:180px;
+	line-height:30px;
+	margin:5px 0 0 0;
+}
+      
+#navbar li:hover ul{
+	display:block;
+}

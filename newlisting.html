@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>RPITEM SUBMIT</title>    
+    <title>New Item</title>    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>   
     
 	<!--CSS-->
@@ -9,135 +9,26 @@
 	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
 
     <!--Scripts-->
-    <script type="text/javascript" src="resources/newitemval.js">
-        
-    </script>
-
-    <!--Style-->
-    <style>
-      #box{
-        margin: auto;
-        width: 1000px
-      }
-	  
-      #menu{
-	    margin: 5px
-	  }
-	  
-	  form{
-	    margin-top: 100px;
-	  }
-	  
-      .forform{
-        margin:10px;
-        line-height:35px;
-      }
-	  
-      .inside{
-        margin: 5px 40px 10px 30px;
-      }
-	  
-      #up{
-        text-align:right;
-        margin: 30px 70px 40px 10px;
-      }
-	  
-      ul{
-	    padding: 0;
-	    margin: 0;
-	    list-style: none;
-      }
-      
-	  a{
-	    text-decoration:none;
-	    color:#000;
-	  }  
-      
-	  a:hover {
-	    color: #888888;
-	  } 
-      
-	  ul li{
-	    float: left; 
-	    text-align:center;
-	    width:185px;
-	    height:30px;
-	    display:inline-block;
-	    position:relative;
-	    line-height:40px;
-	    border-style:solid;
-	    margin:3px;
-      }
-      
-	  li ul{
-	    display:none;
-        position:absolute;
-	    top:100%;
-	  }
-      
-	  li ul li{
-	    text-align:center;
-	    background-color:#FFFFFF;
-	    width:180px;
-	    line-height:30px;
-	    margin:5px 0 0 0;
-	  }
-      
-	  li:hover ul{
-	    display:block;
-	  }
-      
-	  #body{
-	    z-index: 1;
-        margin: 2px;
-	  }
-    </style>
+    <script type="text/javascript" src="resources/newitemval.js"></script>
   </head>
   <body>
+
+	<!--Navigation Bar-->
+	<nav>
+		<ul>
+			<!--Site Name-->
+			<li id="logo">RPItems</li>
+			<!--Menu Links-->
+			<li>About</li>
+			<li>Sign Up</li>
+			<li>Log In</li>
+		</ul>
+	</nav>
+	
     <!--Header-->
     <header>
-      <h1>RPITEM</h1>
-      <h2>Seller</h2>
+      <h1>New Listing</h1>
     </header>
-	
-    <!--Nav Bar-->
-    <nav>
-      <ul>
-        <!--Home-->
-		<li><a href="index.html">Home</a></li>
-		
-		<!--Department-->
-        <li>
-		  Department
-          <ul>
-            <li><a href = "#">Books</a></li>
-            <li><a href = "#">Clothes</a></li>
-            <li><a href = "#">Electronics</a></li>
-            <li><a href = "#">Games</a></li>
-            <li><a href = "#">Movies</a></li>
-			<li><a href = "#">Music</a></li>
-            <li><a href = "#">Tool</a></li>
-            <li><a href = "#">Others</a></li>
-          </ul>
-        </li>
-		
-		<!--Account-->
-        <li>
-		  Your Account
-          <ul>
-          <li><a href = "profile.html">Information</a></li>
-          <li><a href = "index.html">Buy</a></li>
-          <li><a href = "index.html">Sell</a></li>
-          </ul>
-        </li>
-		
-		<!--Cart-->
-        <li><a href="cart.html">Cart</a></li>
-		
-		<!--Contact-->
-        <li>Contact Us</li>
-      </ul>
-    </nav>
 
 	<!--Input Data-->
     <form id="addForm" name="addForm" action="listinghandler.php" method="post" enctype="multipart/form-data" onsubmit="return validate(this);">
@@ -202,7 +93,7 @@
           </fieldset>
 
           <div id = "up">
-            <input type="submit" value="Submit" id="save" name="save" style="font-size: 50px;"/>
+            <input type="submit" value="Submit" id="save" name="save" style="font-size: 40px;"/>
           </div>
         </div>
       </fieldset>
