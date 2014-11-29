@@ -155,16 +155,16 @@
               <option value="electronics">Electronics</option>
               <option value="games">Games</option>
               <option value="movies">Movies</option>
-			  <option value="movies">Music</option>
+			  <option value="music">Music</option>
               <option value="tools">Tool</option>
               <option value="other">Others</option>
             </select>
             <br />
 
             <!--Name-->
-            <label for="item" class="field">Item Name:</label>
+            <label for="itemName" class="field">Item Name:</label>
             <div class="value">
-			  <input type="text" size="60" value="" name="item" id="item" />
+			  <input type="text" size="60" value="" name="itemName" id="itemName" />
 			</div>
             
             <!--Price-->
@@ -174,48 +174,30 @@
 			</div>
             
             <!--Description-->
-            <label id = "descripe" class="field">Description:</label>
+            <label id = "description" class="field">Description:</label>
             <div class="value">
               <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
             </div>
             
             <!--Image-->
-			<label for="file">Item Picture:</label>
-            <input type="file" name="file" id="file" /> 
+			<label for="itemPicture">Item Picture:</label>
+            <input type="file" name="itemPicture" id="itemPicture" /> 
           </div>
 
           <fieldset class="forform"> 
             <legend>Contact Information</legend>
             <div class= "inside">
               
-			  <label  id = "Must" class="field">Phone:</label>
+			  <label  id = "Must" class="field" for="phone">Phone:</label>
               <div class="value">
-			    <input type="text" size="60" value="" name="org" id="org"/>
+			    <input type="text" size="60" value="" name="phone" id="phone"/>
 			  </div>
             
-              <label id = "Must" class="field">Email:</label>
+              <label id = "Must" class="field" for="email">Email:</label>
               <div class="value">
-			    <input type="text" size="60" value="" name="pseudonym" id="pseudonym"/>
+			    <input type="text" size="60" value="" name="email" id="email"/>
 			  </div>
-			  
-            </div>
-          <legend>Contect Information</legend>
-          <div class= "inside">
-          <label  id = "phon" class="field">Phone:</label>
-            <div class="value"><input type="text" size="60" value="" name="phone" id="phone"/></div>
-            
-            <label id = "emai" class="field">Email:</label>
-            <div class="value"><input type="text" size="60" value="" name="Email" id="Email"/></div>
-          </div>
-          </fieldset>
 
-          <fieldset class="forform"> 
-            <legend>Additional Information</legend>
-            <div class= "inside">
-              <label class="field">Additional Information(option):</label>
-              <div class="value">
-                <textarea rows="4" cols="70" name="description" id="Additional" placeholder="Please type here"></textarea>
-              </div>
             </div>
           </fieldset>
 
