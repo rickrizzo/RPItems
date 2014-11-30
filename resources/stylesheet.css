@@ -153,3 +153,6 @@ form{
 #navbar li:hover ul{
 	display:block;
 }
+footer{
+    text-align: center;
+}
