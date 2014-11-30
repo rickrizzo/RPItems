@@ -28,5 +28,5 @@ function validate(formObj) {
 
 window.onload = function() {
     document.getElementById("username").focus();
-    // focuses on the first name box when the page loads
+    // focuses on the email address box when the page loads
 }
