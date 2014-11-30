@@ -39,7 +39,7 @@
             
             <!--Catagory-->
             <label for = "catagory" class="field">Category:</label>
-            <select id = "catagory" name="catagory">
+            <select id = "catagory" required name="catagory">
               <option value=""></option>
               <option value="books">Books</option>
               <option value="clothing">Clothing</option>
@@ -55,13 +55,13 @@
             <!--Name-->
             <label for="itemName" class="field">Item Name:</label>
             <div class="value">
-			  <input type="text" size="60" value="" name="itemName" id="itemName" />
+			  <input type="text" required size="60" value="" name="itemName" id="itemName" />
 			</div>
             
             <!--Price-->
-            <label id = "price" class="field">Price:</label>
+            <label id = "price" class="field" >Price:</label>
             <div class="value">
-			  <input type="text" size="60" value="" name="price" id="price"/>
+			  <input type="number" required size="60"  min = "0" value="" name="price" id="price"/>
 			</div>
             
             <!--Description-->
@@ -75,18 +75,18 @@
             <input type="file" name="itemPicture" id="itemPicture" /> 
           </div>
 
-          <fieldset class="forform"> 
+          <fieldset class="forforminside"> 
             <legend>Contact Information</legend>
             <div class= "inside">
               
 			  <label  id = "Must" class="field" for="phone">Phone:</label>
               <div class="value">
-			    <input type="text" size="60" value="" name="phone" id="phone"/>
+			    <input type="tel" size="60" required value="" name="phone" id="phone"/>
 			  </div>
             
               <label id = "Must" class="field" for="email">Email:</label>
               <div class="value">
-			    <input type="text" size="60" value="" name="email" id="email"/>
+			    <input type="email" size="60" required value="" name="email" id="email"/>
 			  </div>
 
             </div>

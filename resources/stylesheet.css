@@ -1,8 +1,8 @@
 body{
 	font-family: Segoe UI;
 	background-color:white;
-	padding: 0;
-    margin-left: 100px;
+	padding: 25px;
+    margin:auto;
 }
 
 nav{
@@ -86,11 +86,16 @@ form{
 	  
 .forform{
     margin:10px;
-    line-height:35px;
+    line-height:40px;
 }
 	  
 .inside{
-	margin: 5px 40px 10px 30px;
+	margin: 10px 40px 15px 30px;
+}
+
+.forforminside{
+    line-height:40px;
+    margin-top: 15px;
 }
 	  
 #up{
