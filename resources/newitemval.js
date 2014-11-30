@@ -1,6 +1,7 @@
 // JavaScript source code
-function validate(formObj) {
-
+function validate() {
+    
+    /*
     //Variables
     var fix = "";
     var valid = true;
@@ -18,8 +19,9 @@ function validate(formObj) {
     if (fix != "") {
         alert("Please fix the following " + fix);
     }
+    */
 
-  /*
+  
   var a = 0;
   var b = document.forms["addForm"]["Item"].value;
   var c = document.forms["addForm"]["Price"].value;
@@ -55,5 +57,5 @@ function validate(formObj) {
     else{
         alert("Save successfully!")
     }
-    return true;*/
+    return true;
 }
