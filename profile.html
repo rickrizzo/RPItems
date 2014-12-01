@@ -24,17 +24,18 @@
         <h1>RPItems</h1>
     </header>
 
+<div id = "mainbody">
     <!--Contact Infromation-->
     <div id="listing">
-        <img src="resources/profile.jpg" id="itemImage" />
+        <img src="resources/profile.jpg" id="profileImage" />
         <div id="text">
             <div id="description">
                 <h4>Contact Information</h4>
             </div>
             <ul id="itemInfo">
-                <li>John Smith</li>
-                <li>RPI E-mail: smithj@rpi.edu</li>
-                <li>Secondary E-mail: jsmith@gmail.com</li>
+                <li><big>John Smith</big></li>
+                <li>RPI E-mail: <a href="mailto:smithj@rpi.edu">smithj@rpi.edu</a></li>
+                <li>Secondary E-mail: <a href="mailto:smith@gmail.com">jsmith@gmail.com</a></li>
                 <li>Phone: xxx-xxx-xxxx</li>
                 <li>About Me:</li>
                 <li>I am a Mechanical Engineer, I usually get rid of my old books for a good price</li>
@@ -44,15 +45,21 @@
 
     <!--People who bought from this person-->
     <div id="prof">
+        <br/>
         <h4>Customers:</h4>
-        <li><a href="#">Customer 1</a></li>
-        <li><a href="#">Customer 2</a></li>
+        <ul>
+        <li id = "reviewslist"><a href="#">Customer 1</a></li>
+        <li id = "reviewslist"><a href="#">Customer 2</a></li>
+    </ul>
     </div>
     <div id="prof">
         <h4>Current Listings:</h4>
-        <li><a href="#">IEA Textbook First Edition</a></li>
+        <ul>
+        <li id = "reviewslist"><a href="#">IEA Textbook First Edition</a></li>
+    </ul>
     </div>
+</div>
 
-
+<footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
 </body>
 </html>
