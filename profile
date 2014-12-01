@@ -26,7 +26,7 @@
 
     <!--Listing Infromation-->
     <div id="listing">
-        <img src="resources/book.jpg" id="itemImage" />
+        <img src="resources/profile.jpg" id="itemImage" />
         <div id="text">
             <ul id="itemInfo">
                 <li>IEA Textbook First Edition</li>
