@@ -190,9 +190,13 @@ p{
 }
 
 #seller{
-    margin: 190px 300px 300px 300px;
+    margin: 190px 10px 10px 20px;
+    clear:left;
 }
 
 #reviews{
-    float: right;
+    /*float:left;*/
+}
+#reviewslist{
+  list-style: none;
 }
