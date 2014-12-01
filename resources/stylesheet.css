@@ -38,11 +38,11 @@ h1{
   margin: 0;
   border-radius: 100px;
 }
-#picture{
+/*#picture{
   width: 350px;
   height: 350px;
   float: left;
-}
+}*/
 #itemImage {
   width: 100px;
   height: 100px;
@@ -74,8 +74,9 @@ h1{
   float: left;
 }*/
 #text{
-  float:right;
-  width: 500px;
+  float:left;
+  width: 600px;
+  clear:left;
 }
 #profileImage{
   width: 300px;
@@ -88,7 +89,6 @@ h1{
 #listing{
   margin: auto;
   width: 1000px;
-  height: 400px;
 }
 
 #itemInfo{
@@ -112,7 +112,7 @@ h1{
     -ms-align-content: center;
     -webkit-align-content: center;
     align-content: center;
-    width: 500px;
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
