@@ -1,33 +1,73 @@
 <?php
-session_start();
-
-
-/*if($_GET['action'] == "logout"){
-    unset($_SESSION['userid']);
-    unset($_SESSION['username']);
-    echo 'logout success, click here to <a href="login.html">login</a>';
-    exit;
-}*/
-
-
-if(!isset($_POST['submit'])){
-    exit('Error');
-}
-$username = htmlspecialchars($_POST['username']);
-$password = MD5($_POST['password']);
-
-
-include('conn.php');
-
-$check_query = mysql_query("select uid from user where username='$username' and password='$password' 
-limit 1");
-if($result = mysql_fetch_array($check_query)){
-    
-    $_SESSION['username'] = $username;
-    $_SESSION['userid'] = $result['uid'];
-    echo $username,' Welcome! click here to <a href="profile.html">profile</a><br />';
-    exit;
-} else {
-    exit('login fail! <a href="javascript:history.back(-1);">back</a> retry');
-}
+	//Connect to DB
+	$dbOK = false;
+	@ $db = new mysqli('localhost', 'root', 'mysql44', 'members');
+	if ($db->connect_error) {
+		echo '<div class="messages">Could not connect to the database. Error: ';
+		echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+	} else {
+		$dbOk = true; 
+	}
+	
+	$havePost = isset($_POST["Submit"]);
+	if($havePost){
+	  $login = $_POST["username"];
+	  $pass = $_POST["password"];
+	  
+	  $query = "SELECT * FROM members WHERE email LIKE " . $login;
+	  $result = $db->query($query);
+	  $numResults = $results->num_rows;
+	  if($numResults > 0){
+	    $record = $result->fetch_assoc();
+		if($pass == $record["password"]){
+			header('Location: index.html');
+		}
+	  }
+	}
+	
+	$db->close();
 ?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Log In</title>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <link href="resources/stylesheet.css" rel="stylesheet" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="LogInJavascript.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>RPItems</h1>
+      <div id="bodyBlock">
+      <div id="itemLogo">
+        <img src="resources/logo.jpg" id="logo"/>
+      </div>
+      <form id="addForm" name="addForm" action="login.php" method="post" onsubmit="return validate(this);">
+        <fieldset> 
+          <legend>Log In</legend>
+          <div class="formData">
+                          
+            <label class="field" for="username">RPI Email Address:</label>
+            <div class="value">
+			  <input type="email" size="60" value="" name="username" id="username" required/>
+			</div>
+            
+            <label class="field" for="password">Password:</label>
+            <div class="value">
+			  <input type="password" size="60" name="password" value="" id="password" required/>
+			</div>
+            
+			<div class = "submited">
+			  <input type="submit" value="Submit" id="Submit" name="Submit"/>
+			</div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+    <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
+  </body>
+</html>
