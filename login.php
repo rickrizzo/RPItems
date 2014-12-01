@@ -35,8 +35,8 @@
     <title>Log In</title>    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
     <link href="resources/stylesheet.css" rel="stylesheet" type="text/css"/>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="LogInJavascript.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--<script type="text/javascript" src="LogInJavascript.js"></script>-->
   </head>
   <body>
     <div>
