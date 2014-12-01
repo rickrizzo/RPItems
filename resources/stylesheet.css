@@ -169,6 +169,13 @@ footer{
     text-align: center;
 }
 
+/*login*/
+.formData{
+  line-height:40px;
+}
+.submited{
+  margin-top:15px;
+}
 
 #description{
   align-content: center;
