@@ -36,10 +36,11 @@ nav li{
 nav li a{
   color: black;
   text-decoration:none;
+	transition: color 0.2s linear 0s
 }
 
 nav li a:hover{
-  text-decoration: underline;
+  color: #ba0000;
 }
 
 h1{
