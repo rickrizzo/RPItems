@@ -4,45 +4,32 @@
     <title>Sign Up</title>    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
     <link href="resources/stylesheet.css" rel="stylesheet" type="text/css"/>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="SignUpJavascript.js"></script>
   </head>
   <body>
     <div>
-      <h1>Sign Up</h1>
+      <h1>RPItems</h1>
       <div id="bodyBlock">
       <br/>
-<<<<<<< HEAD
-      <form id="addForm" name="addForm" action="userHandler.php" method="post" onsubmit="return validate(this);">
-=======
       <form id="addForm" name="addForm" action="SignUp.php" method="post" onsubmit="return validate(this);">
->>>>>>> origin/master
         <fieldset> 
           <legend>Sign Up</legend>
           <div class="formData">
               
             <label class="field" for="firstName">First Name:</label>
-            <div class="value">
-			  <input type="text" size="60" value="" name="firstName" id="firstName" required/>
-			</div>
+            <div class="value"><input type="text" size="60" value="" name="firstName" id="firstName"/></div>
               
             <label class="field" for="lastName">Last Name:</label>
-            <div class="value"><input type="text" size="60" value="" name="lastName" id="lastName" required/></div>
+            <div class="value"><input type="text" size="60" value="" name="lastName" id="lastName"/></div>
               
             <label class="field" for="username">RPI Email Address:</label>
-            <div class="value">
-			  <input type="text" size="60" value="" name="username" id="username" required/>
-			</div>
+            <div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
             
-            <label class="field" for="password">Password:</label>
-            <div class="value">
-			  <input type="password" size="60" value="" name="password" id="password" required/>
-			</div>
+            <label class="field" for="password">Create Your Password:</label>
+            <div class="value"><input type="password" size="60" value="" name="password" id="password"/></div>
             
             <label class="field" for="confirmPassword">Confirm Password:</label>
-            <div class="value">
-			  <input type="password" size="60" value="" name="confirmPassword" id="confirmPassword" required/>
-			</div>
+            <div class="value"><input type="password" size="60" value="" name="confirmPassword" id="confirmPassword"/></div>
             
             <br />
             <input type="submit" value="Submit" id="Submit" name="Submit"/>

@@ -1,13 +1,12 @@
 body{
   background-color:white;
   margin:auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   font-size: 95%;
   font-weight: 100;
   padding: 20px;
 }
 
-/*Navigation Bar*/
 nav{
   padding: 10px 20px 0 10px;
   float: right;
@@ -25,16 +24,11 @@ nav li{
   background-color:white;
 }
 
-nav li a{
-	color:black;
-	text-decoration: none;
+nav li:hover{
+  margin: 0 9px;
+  border: 1px dashed black;
 }
 
-nav li a:hover{
-	text-decoration: underline;
-}
-
-/*Page Heading*/
 h1{
   clear:right;
   color: white;
@@ -44,18 +38,7 @@ h1{
   margin: 0;
   border-radius: 100px;
 }
-/*Index Page*/
-#index{
-	width: 1000px;
-	margin: 0 auto;
-	text-align: center;
-}
 
-#index td:hover{
-	box-shadow: 0 0 2px 0;
-}
-
-/*Item Listing*/
 #itemImage {
   width: 400px;
   height: 400px;
@@ -102,7 +85,6 @@ h1{
     margin-right: auto;
 }
 
-/*Item Form*/
 #box{
   margin: auto;
   width: 1000px;
@@ -135,12 +117,64 @@ form{
   margin: 30px 70px 40px 10px;
 }
 
+#navbar{
+  position:fixed;	
+  right: 0;
+  top: 25%;
+}
+
+#navbar ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+      
+#navbar a{
+  text-decoration:none;
+  color:#000;
+}  
+      
+#navbar a:hover {
+  color: #888888;
+} 
+      
+#navbar ul li{
+  float: left; 
+  text-align:center;
+  width:185px;
+  height:30px;
+  display:inline-block;
+  position:relative;
+  line-height:40px;
+  border-style:solid;
+  margin:3px;
+}
+      
+#navbar li ul{
+  display:none;
+  position:absolute;
+  top:100%;
+}
+      
+#navbar li ul li{
+  text-align:center;
+  background-color:#FFFFFF;
+  width:180px;
+  line-height:30px;
+  margin:5px 0 0 0;
+}
+      
+#navbar li:hover ul{
+
+	display:block;
+}
+
 footer{
   margin-top: 30px; 
     text-align: center;
 }
 
-/*Login*/
+/*login*/
 .formData{
   line-height:40px;
 }
@@ -148,27 +182,10 @@ footer{
   margin-top:15px;
 }
 
-/*login*/
-#bodyBlock{
-  width: 500px;
-  margin: auto;
-}
-
-#prof{
-    margin: 70px 10px 0px 500px;
-    clear:left;
-}
-
-#itemLogo{
-	margin: 0 auto;
-	padding: 0 100px;
-}
-
 p{
   text-align: justify;
 }
 
-/*Item Submit*/
 #thank{
 	text-align: center;
 	width: 1000px;
@@ -196,9 +213,6 @@ p{
 }
 #reviewslist{
   list-style: none;
-<<<<<<< HEAD
-}
-=======
 }
 /*login*/
 #bodyBlock{
@@ -214,4 +228,3 @@ display: inline;
     margin: auto;
     clear:left;
   }
->>>>>>> origin/master

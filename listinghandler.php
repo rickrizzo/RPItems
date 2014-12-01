@@ -44,7 +44,6 @@
 <head>
 	<title>Listing Posted</title>
 	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<h1>Thank You!</h1>
