@@ -278,3 +278,8 @@ p{
   list-style: none;
   display: inline;
 }
+#whitebg{
+  width: 875px;
+  background-color: white;
+  margin: auto;
+}
