@@ -2,16 +2,16 @@ function validate(formObj) {
   var alertText = "";
   var reg = /^\"?[\w-_\.]*\"?@rpi\.edu$/;
   if (formObj.username.value == "") {
-    alertText += "You must enter an email address.\n";
+    alertText += "\nYou must enter an email address.\n";
     formObj.username.focus();
   } else if (reg.test(formObj.username.value)){
       alertText == "";
   } else if (!reg.test(formObj.username.value)) {
-      alertText += "You must enter a valid RPI email address.\n";
+      alertText += "\nYou must enter a valid RPI email address.\n";
   } if (formObj.password.value == "") {
        if (alertText == "") {
           formObj.password.focus();
-       } alertText += "You must enter a password.";
+       } alertText += "\nYou must enter a password.";
   } if (alertText != "") {
     // if the variable alertText is not empty
       alert(alertText);

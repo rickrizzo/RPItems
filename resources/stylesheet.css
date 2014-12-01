@@ -5,15 +5,15 @@ body{
   font-size: 95%;
   font-weight: 100;
   padding: 20px;
-
 }
 
 nav{
-  padding: 10px 0 0 10px;
+  padding: 10px 20px 0 10px;
+  float: right;
 }
 
 nav ul{
-  margin: 0 0 10px 75%;
+  margin: 0 0 10px 10px;
 }
 
 nav li{
@@ -30,6 +30,7 @@ nav li:hover{
 }
 
 h1{
+  clear:right;
   color: white;
   background-color: red;
   padding: 10px;
@@ -45,9 +46,16 @@ h1{
   float: left;
   margin: 0 50px 0 0;
 }
+#profileImage{
+  width: 300px;
+  height: 300px;
+  border-radius:10px;
+  float: left;
+  margin: 0 50px 0 0;
+}
 
 #listing{
-  margin: 40px auto 0 auto;
+  margin: auto;
   width: 1000px;
 }
 
@@ -211,7 +219,12 @@ p{
   width: 500px;
   margin: auto;
 }
+#bottonlist{
+list-style: none;
+display: inline;
+}
 
 #prof{
-    margin: 70px 10px 0px 500px;
+    margin: auto;
     clear:left;
+  }
