@@ -20,13 +20,15 @@ nav li{
   display: inline;
   margin:0 10px;
   list-style:none;
-  color: black;
-  background-color:white;
 }
 
-nav li:hover{
-  margin: 0 9px;
-  border: 1px dashed black;
+nav li a{
+  color: black;
+  text-decoration:none;
+}
+
+nav li a:hover{
+	text-decoration: underline;
 }
 
 h1{
@@ -38,11 +40,17 @@ h1{
   margin: 0;
   border-radius: 100px;
 }
-/*#picture{
-  width: 350px;
-  height: 350px;
-  float: left;
-}*/
+
+#index{
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#index td:hover{
+	box-shadow: 0 0 2px 0;
+}
+
 #itemImage {
   width: 100px;
   height: 100px;
@@ -61,6 +69,7 @@ h1{
 #itemImage{
   transition: 2s;
 }
+
 #aimage:active{
   width: 300px;
   height: 300px;
@@ -68,11 +77,7 @@ h1{
   float: left;
   margin: 0 50px 0 0;
 }
-/*#picture{
-  width: 450px;
-  height: 450px;
-  float: left;
-}*/
+
 #text{
   float:left;
   width: 600px;

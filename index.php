@@ -9,12 +9,10 @@
 	<!--Navigation Bar-->
 	<nav>
 		<ul>
-			<!--Site Name-->
-			<li id="logo">RPItems</li>
-			<!--Menu Links-->
+			<li><a href="index.php">RPItems</a></li>
 			<li><a href="about.html">About</a></li>
-			<li>Sign Up</li>
-			<li><a href="LogIn.html">Log In</a></li>
+			<li><a href="SignUp.html">Sign Up</a></li>
+			<li><a href="login.php">Log In</a></li>
 		</ul>
 	</nav>
 	
@@ -24,90 +22,53 @@
 		<h2>A place for students to sell things within the RPI Community</h2>
 	</header>
 	
-	<!--Nav Bar-->
-    <div id="navbar">
-      <ul>
-        <!--Home-->
-		<!--<li><a href="index.html">Home</a></li>-->
-		
-		<!--Department-->
-        <li>
-		  Department
-          <ul>
-            <li><a href = "#">Books</a></li>
-            <li><a href = "#">Clothes</a></li>
-            <li><a href = "#">Electronics</a></li>
-            <li><a href = "#">Games</a></li>
-            <li><a href = "#">Movies</a></li>
-			<li><a href = "#">Music</a></li>
-            <li><a href = "#">Tool</a></li>
-            <li><a href = "#">Others</a></li>
-          </ul>
-        </li>
-		
-		<!--Account-->
-        <!--<li>
-		  Your Account
-          <ul>
-          <li><a href = "profile.html">Information</a></li>
-          <li><a href = "index.html">Buy</a></li>
-          <li><a href = "index.html">Sell</a></li>
-          </ul>
-        </li>-->
-		
-		<!--Cart-->
-        <!--<li><a href="cart.html">Cart</a></li>-->
-		
-		<!--Contact-->
-        <!--<li>Contact Us</li>-->
-      </ul>
-    </div>
-	
 	<!--Search Bar-->
-	<form>
-		<label for="search">Find what you need<br /></label>
-		<input type="search" id="search"/>
-		<button type="submit" id="searchSubmit">Search</button>
-	</form>
-	<br/>
-	
-	<!--List New Item-->
-	<button onclick="window.location.href='/rpitems/newlisting.html'">List New Item</button>
-	
-	<!--Popular Items-->
-	<div id="popular">
-		<h3>Popular Items</h3>
-        <table>
-			<?php 
-				$db = mysqli_connect('localhost', 'root', 'mysql44', 'rpitems') or die(mysqli_error($db));
-				$query = 'select * from items';
-				$result = $db->query($query);
-				$numItems = $result->num_rows;
-				
-				for($i = 0; $i < $numItems; $i ++){
-					$record = $result->fetch_assoc();
-					if($i % 3 == 0){
-						if($i != 0){
-							echo "</tr>";
+	<div id="index">
+		<form>
+			<label for="search">Find what you need<br /></label>
+			<input type="search" id="search"/>
+			<button type="submit" id="searchSubmit">Search</button>
+		</form>
+		<br/>
+		
+		<!--List New Item-->
+		<button onclick="window.location.href='/rpitems/newlisting.html'">List New Item</button>
+		
+		<!--Popular Items-->
+		<div id="popular">
+			<h3>Popular Items</h3>
+			<table>
+				<?php 
+					$db = mysqli_connect('localhost', 'root', 'mysql44', 'rpitems') or die(mysqli_error($db));
+					$query = 'select * from items';
+					$result = $db->query($query);
+					$numItems = $result->num_rows;
+					
+					for($i = 0; $i < $numItems; $i ++){
+						$record = $result->fetch_assoc();
+						if($i % 5 == 0){
+							if($i != 0){
+								echo "</tr>";
+							}
+							echo "<tr>";
+							
 						}
-						echo "<tr>";
-						
+						echo "<td>
+							<h5>" . $record['itemName']."</h5>
+							<p>$" . $record['price'] ."</p>
+							<img src = '". $record['img'] ."' height='200' width = '200' >
+							</td>";
+							
+						if($i == 8){
+							break;
+						}
 					}
-					echo "<td>
-						<h5>" . $record['itemName']."</h5>
-						<p>$" . $record['price'] ."</p>
-						<img src = '". $record['img'] ."' height='200' width = '200' >
-						</td>";
-						
-					if($i == 8){
-						break;
-					}
-				}
-				
-				$result->free();
-				$db->close();
-			?>
-        </table>
+					
+					$result->free();
+					$db->close();
+				?>
+			</table>
+		</div>
 	</div>
 	<footer>
 		<p>Created Winter 2014 for Intro to Information Technology and Web Science</p>
