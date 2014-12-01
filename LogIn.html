@@ -18,32 +18,33 @@
       <li><a href="LogIn.html">Log In</a></li>
   		</ul>
   	</nav>
-    <div>
       <h1>Log into RPItems</h1>
-      <div id="bodyBlock">
-      <div class="itemLogo">
-        <img src="resources/logo.jpg" id="logo"/>
-      </div>
-      <form id="addForm" name="addForm" action="login.php" method="post" onsubmit="return validate(this);">
-        <fieldset> 
-          <legend>Log In</legend>
-          <div class="formData">
-                          
-            <label class="field" for="username">RPI Email Address:</label>
-            <div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
-            
-            <label class="field" for="password">Password:</label>
+			<h2>A place for students to sell things within the RPI Community</h2>
+			<div id="description">
+				<div id="bodyBlock">
+					<div class="itemLogo">
+						<img src="resources/logo.jpg" id="logo"/>
+					</div>
+					<form id="addForm" name="addForm" action="login.php" method="post" onsubmit="return validate(this);">
+						<fieldset> 
+							<legend>Log In</legend>
+							<div class="formData">
 
-            <div class="value"><input type="password" size="60" name="password" value="" id="password" /></div>
-            <div class = "submited">
-            <li id ="bottonlist"><input type="submit" value="Submit" id="Submit" name="Submit"/></li>
-            <li id ="bottonlist"><input type = "button" value = "New User? click here to sign up!" onclick = "location ='Signup.html'"/></li>
-          </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+								<label class="field" for="username">RPI Email Address:</label>
+								<div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
+
+								<label class="field" for="password">Password:</label>
+
+								<div class="value"><input type="password" size="60" name="password" value="" id="password" /></div>
+								<div class = "submited">
+									<li id ="bottonlist"><input type="submit" value="Submit" id="Submit" name="Submit"/></li>
+									<li id ="bottonlist"><input type = "button" value = "New User? click here to sign up!" onclick = "location ='Signup.html'"/></li>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
     <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
+			</div>
   </body>
 </html>
