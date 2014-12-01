@@ -197,6 +197,7 @@ p{
 
 #reviews{
     /*float:left;*/
+    margin: auto;
 }
 #reviewslist{
   list-style: none;
