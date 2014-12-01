@@ -188,3 +188,14 @@ p{
   text-align: justify;
 }
 
+#thank{
+	text-align: center;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#thank button{
+	width: 100px;
+	margin: 0 450px;
+}

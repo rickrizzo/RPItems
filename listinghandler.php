@@ -26,7 +26,7 @@
 		catagory VARCHAR(30) NOT NULL,
 		price FLOAT(6, 2) NOT NULL,
 		description VARCHAR(400),
-		img LONGBLOB NOT NULL,
+		img VARCHAR(200),
 		PRIMARY KEY(id)
 	)") or die("TABLE ERROR: " . mysqli_error($link));
 	
@@ -37,40 +37,19 @@
 	$insert = mysqli_query($link, $strSQL) or die ("INSERT ERROR: " . mysqli_error($link));
 	
 	$link->close();
-	
-	
-	
-//Pictures need to be added, I am just not sure how to store them yet
-
-/*if ((($_FILES["file"]["type"] == "image/gif")
-|| ($_FILES["file"]["type"] == "image/jpeg")
-|| ($_FILES["file"]["type"] == "image/pjpeg"))
-  
-  {
-  if ($_FILES["file"]["error"] > 0)
-    {
-    echo "Error: " . $_FILES["file"]["error"] . "<br />";
-    }
-  else
-    {
-    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
-    echo "Type: " . $_FILES["file"]["type"] . "<br />";
-    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
-    echo "Stored in: " . $_FILES["file"]["tmp_name"];
-    }
-  }
-else
-  {
-  echo "Invalid file";
-  }*/
   
 ?>
 
 <html>
 <head>
-<title>Listing Posted</title>
+	<title>Listing Posted</title>
+	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
 </head>
 <body>
-<h1>You Good!</h1>
+	<h1>Thank You!</h1>
+	<div id="thank">
+		<h2>Your item has been uploaded</h2>
+		<button><a href="index.php">Go back</a></button>
+	</div>
 </body>
 </html>

@@ -78,16 +78,35 @@
 	<div id="popular">
 		<h3>Popular Items</h3>
         <table>
-            <tr>
-                <td>Item</td>
-                <td>Item</td>
-                <td>Item</td>
-            </tr>
-            <tr>
-                <td>Item</td>
-                <td>Item</td>
-                <td>Item</td>
-            </tr>
+			<?php 
+				$db = mysqli_connect('localhost', 'root', 'mysql44', 'rpitems') or die(mysqli_error($db));
+				$query = 'select * from items';
+				$result = $db->query($query);
+				$numItems = $result->num_rows;
+				
+				for($i = 0; $i < $numItems; $i ++){
+					$record = $result->fetch_assoc();
+					if($i % 3 == 0){
+						if($i != 0){
+							echo "</tr>";
+						}
+						echo "<tr>";
+						
+					}
+					echo "<td>
+						<h5>" . $record['itemName']."</h5>
+						<p>$" . $record['price'] ."</p>
+						<img src = '". $record['img'] ."' height='200' width = '200' >
+						</td>";
+						
+					if($i == 8){
+						break;
+					}
+				}
+				
+				$result->free();
+				$db->close();
+			?>
         </table>
 	</div>
 	<footer>
