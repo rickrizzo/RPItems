@@ -4,24 +4,14 @@
     <title>Log In</title>    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
     <link href="resources/stylesheet.css" rel="stylesheet" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="LogInJavascript.js"></script>
   </head>
   <body>
-    <!--Navigation Bar-->
-  	<nav>
-  		<ul>
-  			<!--Site Name-->
-  			<li id="logo"><a href="index.php">RPItems</a></li>
-  			<!--Menu Links-->
-  			<li><a href="about.html">About</a></li>
-  			<li>Sign Up</li>
-  			<li><a href="LogIn.html">Log In</a></li>
-  		</ul>
-  	</nav>
     <div>
       <h1>RPItems</h1>
       <div id="bodyBlock">
-      <div class="itemLogo">
+      <div id="itemLogo">
         <img src="resources/logo.jpg" id="logo"/>
       </div>
       <form id="addForm" name="addForm" action="login.php" method="post" onsubmit="return validate(this);">
@@ -30,15 +20,27 @@
           <div class="formData">
                           
             <label class="field" for="username">RPI Email Address:</label>
-            <div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
+            <div class="value">
+			  <input type="email" size="60" value="" name="username" id="username"/>
+			</div>
             
             <label class="field" for="password">Password:</label>
+<<<<<<< HEAD
 
             <div class="value"><input type="password" size="60" name="password" value="" id="password" /></div>
             <div class = "submited">
             <li id ="bottonlist"><input type="submit" value="Submit" id="Submit" name="Submit"/></li>
             <li id ="bottonlist"><input type = "button" value = "New User, sign up!" onclick = "location ='Signup.html'"/></li>
           </div>
+=======
+            <div class="value">
+			  <input type="password" size="60" name="password" value="" id="password" />
+			</div>
+            
+			<div class = "submited">
+			  <input type="submit" value="Submit" id="Submit" name="Submit"/>
+			</div>
+>>>>>>> FETCH_HEAD
           </div>
         </fieldset>
       </form>

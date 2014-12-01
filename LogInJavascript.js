@@ -18,10 +18,7 @@ function validate(formObj) {
       // send an alert containing alertText
       return false;
   } if (alertText == "") {
-    // if the variable alertText is empty
-      alert("Welcome!");
-      // send an alert saying "Welcome!"
-      return true;
+    return true;
   }
 }
 
