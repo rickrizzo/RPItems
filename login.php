@@ -40,6 +40,15 @@
   </head>
   <body>
     <div>
+		<!--Navigation Bar-->
+		<nav>
+			<ul>
+				<li><a href="index.php">RPItems</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="SignUp.html">Sign Up</a></li>
+				<li><a href="login.php">Log In</a></li>
+			</ul>
+		</nav>
       <h1>RPItems</h1>
       <div id="bodyBlock">
       <div id="itemLogo">

@@ -59,8 +59,14 @@ h1{
   margin: 0 auto;
 }
 
+#index td{
+  background-color:white;
+  opacity: 0.7;
+}
+
 #index td:hover{
   box-shadow: 0 0 2px 0;
+  opacity: 1.0;
 }
 
 #itemImage {
@@ -148,6 +154,7 @@ h1{
 	  
 form{
   margin-right: 40px;
+  background-color: white;
 }
 	  
 .forform{
@@ -268,7 +275,10 @@ p{
 /*login*/
 #bodyBlock{
   width: 500px;
+  height: 450px;
   margin: auto;
+  background-color: white;
+  border-radius: 100px;
 }
 
 #prof{
