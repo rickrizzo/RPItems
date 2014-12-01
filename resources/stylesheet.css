@@ -1,9 +1,9 @@
 body{
   background-color:white;
-	background-image: url(http://upload.wikimedia.org/wikipedia/commons/6/66/GreeneBuildingRPI.JPG);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/6/66/GreeneBuildingRPI.JPG);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin:auto;
   font-family: sans-serif;
   font-size: 95%;
@@ -15,12 +15,12 @@ nav{
   padding: 10px 20px 0 10px;
   float: right;
   background-color: #aaa;
-	border-radius: 50px;
+  border-radius: 50px;
 }
 
 #logo{
-	padding: 0 100px;
-	font-size: 120%;
+  padding: 0 100px;
+  font-size: 120%;
 }
 
 nav ul{
@@ -39,7 +39,7 @@ nav li a{
 }
 
 nav li a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1{
@@ -59,7 +59,7 @@ h1{
 }
 
 #index td:hover{
-	box-shadow: 0 0 2px 0;
+  box-shadow: 0 0 2px 0;
 }
 
 #itemImage {
@@ -93,7 +93,7 @@ h1{
   float:left;
   width: 600px;
   clear:left;
-	padding: 0px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
 }
 #profileImage{
   width: 300px;
@@ -125,15 +125,15 @@ h1{
 }
 
 #description {
-	padding: 20px;
-	-ms-align-content: center;
-	-webkit-align-content: center;
-	align-content: center;
-	width: 700px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-	border-radius: 20px;
+  padding: 20px;
+  -ms-align-content: center;
+  -webkit-align-content: center;
+  align-content: center;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 20px;
 }
 
 #box{
@@ -150,17 +150,17 @@ form{
 }
 	  
 .forform{
-    margin:10px;
-    line-height:40px;
+  margin:10px;
+  line-height:40px;
 }
 	  
 .inside{
-	margin: 10px 40px 15px 30px;
+  margin: 10px 40px 15px 30px;
 }
 
 .forforminside{
-    line-height:40px;
-    margin-top: 15px;
+  line-height:40px;
+  margin-top: 15px;
 }
 	  
 #up{
@@ -216,13 +216,12 @@ form{
 }
       
 #navbar li:hover ul{
-
-	display:block;
+  display:block;
 }
 
 footer{
   padding: 30px 0px 20px 0px;
-    text-align: center;
+  text-align: center;
 }
 
 /*login*/
@@ -238,15 +237,15 @@ p{
 }
 
 #thank{
-	text-align: center;
-	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
+  text-align: center;
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #thank button{
-	width: 100px;
-	margin: 0 450px;
+  width: 100px;
+  margin: 0 450px;
 }
 
 #mainbody{
@@ -254,13 +253,13 @@ p{
   width: 850px;
 }
 #seller{
-    /*margin: 190px 10px 10px 20px;*/
-    clear:left;
+  /*margin: 190px 10px 10px 20px;*/
+  clear:left;
 }
 
 #reviews{
-    /*float:left;*/
-    margin: auto;
+  /*float:left;*/
+  margin: auto;
 }
 #reviewslist{
   list-style: none;
@@ -272,13 +271,15 @@ p{
 }
 
 #prof{
-    margin: auto;
-    clear:left;
-  }
+  margin: auto;
+  clear:left;
+}
+
 #bottonlist{
   list-style: none;
   display: inline;
 }
+
 #whitebg{
   width: 875px;
   background-color: white;
