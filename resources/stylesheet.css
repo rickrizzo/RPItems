@@ -200,3 +200,8 @@ p{
 #reviewslist{
   list-style: none;
 }
+/*login*/
+#bodyBlock{
+  width: 500px;
+  margin: auto;
+}
