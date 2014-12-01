@@ -7,7 +7,7 @@ $password = $_POST['password'];
 $firstname = $_POST['firstName'];
 $lastname = $_POSt['lastname'];
 
-include('index.php');
+include('conn.php');
 
 $check_query = mysql_query("select uid from user where username='$username' limit 1");
 if(mysql_fetch_array($check_query)){
