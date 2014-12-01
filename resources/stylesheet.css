@@ -224,3 +224,7 @@ p{
     margin: auto;
     clear:left;
   }
+#bottonlist{
+  list-style: none;
+  display: inline;
+}

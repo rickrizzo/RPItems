@@ -49,8 +49,6 @@ function validate(formObj) {
 window.onload = function() {
     document.getElementById("firstName").focus();
     // focuses on the first name box when the page loads
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> b43e54319e10a8eb48d58197ff8da59f16a4cec1
+
