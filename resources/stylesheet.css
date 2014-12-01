@@ -190,8 +190,12 @@ p{
 	margin: 0 450px;
 }
 
+#mainbody{
+  margin:auto;
+  width: 1000px;
+}
 #seller{
-    margin: 190px 10px 10px 20px;
+    /*margin: 190px 10px 10px 20px;*/
     clear:left;
 }
 
