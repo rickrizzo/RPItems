@@ -219,6 +219,10 @@ p{
   width: 500px;
   margin: auto;
 }
+#bottonlist{
+list-style: none;
+display: inline;
+}
 
 #prof{
     margin: auto;
