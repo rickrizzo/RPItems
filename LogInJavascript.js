@@ -1,9 +1,14 @@
 function validate(formObj) {
   var alertText = "";
+  var reg = /^\"?[\w-_\.]*\"?@rpi\.edu$/;
   if (formObj.username.value == "") {
-    alertText += "You must enter a username.\n";
+    alertText += "You must enter an email address.\n";
     formObj.username.focus();
-  }  if (formObj.password.value == "") {
+  } else if (reg.test(formObj.username.value)){
+      alertText == "";
+  } else if (!reg.test(formObj.username.value)) {
+      alertText += "You must enter a valid RPI email address.\n";
+  } if (formObj.password.value == "") {
        if (alertText == "") {
           formObj.password.focus();
        } alertText += "You must enter a password.";
@@ -14,8 +19,8 @@ function validate(formObj) {
       return false;
   } if (alertText == "") {
     // if the variable alertText is empty
-      alert("Success");
-      // send an alert saying "Success"
+      alert("Welcome!");
+      // send an alert saying "Welcome!"
       return true;
   }
 }
@@ -23,5 +28,5 @@ function validate(formObj) {
 
 window.onload = function() {
     document.getElementById("username").focus();
-    // focuses on the first name box when the page loads
+    // focuses on the email address box when the page loads
 }
