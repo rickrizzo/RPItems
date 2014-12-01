@@ -1,7 +1,7 @@
 <?php
 	//Connect to DB
 	$dbOK = false;
-	@ $db = new mysqli('localhost', 'root', 'mysql44', 'members');
+	@ $db = new mysqli('localhost', 'root', 'mysql44', 'rpitems');
 	if ($db->connect_error) {
 		echo '<div class="messages">Could not connect to the database. Error: ';
 		echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
@@ -14,13 +14,13 @@
 	  $login = $_POST["username"];
 	  $pass = $_POST["password"];
 	  
-	  $query = "SELECT * FROM members WHERE email LIKE " . $login;
+	  $query = "SELECT * FROM members WHERE email LIKE '$login'";
 	  $result = $db->query($query);
-	  $numResults = $results->num_rows;
-	  if($numResults > 0){
+	  $numResults = $result->num_rows;
+	  if($numResults != 0){
 	    $record = $result->fetch_assoc();
 		if($pass == $record["password"]){
-			header('Location: index.html');
+			header('Location: index.php');
 		}
 	  }
 	}
