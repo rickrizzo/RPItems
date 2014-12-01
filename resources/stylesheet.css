@@ -92,6 +92,7 @@ h1{
   float:left;
   width: 600px;
   clear:left;
+	padding: 0px 0px 20px 0px;
 }
 #profileImage{
   width: 300px;
