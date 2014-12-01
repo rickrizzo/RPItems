@@ -50,7 +50,7 @@
 			</ul>
 		</nav>
       <h1>RPItems</h1>
-      <div id="bodyBlock">
+      <div id="description">
       <div id="itemLogo">
         <img src="resources/logo.jpg" id="logo"/>
       </div>
