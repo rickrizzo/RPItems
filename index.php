@@ -24,9 +24,9 @@
 	
 	<!--Search Bar-->
 	<div id="index">
-		<form>
+		<form method="post" action="searchHandler.php">
 			<label for="search">Find what you need<br /></label>
-			<input type="search" id="search"/>
+			<input type="search" id="search" name="search"/>
 			<button type="submit" id="searchSubmit">Search</button>
 		</form>
 		<br/>
@@ -39,7 +39,7 @@
 			<h3>Popular Items</h3>
 			<table>
 				<?php 
-					$db = mysqli_connect('localhost', 'root', 'mysql44', 'rpitems') or die(mysqli_error($db));
+					$db = mysqli_connect('localhost', 'root', '', 'rpitems') or die(mysqli_error($db));
 					$query = 'select * from items';
 					$result = $db->query($query);
 					$numItems = $result->num_rows;
