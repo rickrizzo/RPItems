@@ -1,9 +1,9 @@
 <?php
 	//Item Information
 	$catagory = $_POST["catagory"];
-	$item = $_POST["itemName"];
+	$item = htmlspecialchars(trim($_POST["itemName"]));
 	$price = $_POST["price"];
-	$description = $_POST["description"];
+	$description = htmlspecialchars(trim($_POST["description"]));
 	$img = $_POST["itemPicture"];
 	
 	//Contact Information
