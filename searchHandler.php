@@ -49,11 +49,11 @@
 			}
 			echo "<tr>";
 		}
-		echo "<td>
+		echo "<td><a href='productpage.php?item=" . $record['itemName'] . "'>
 		<h5>" . $record['itemName']."</h5>
 		<p>$" . $record['price'] ."</p>
 		<img src = '". $record['img'] ."' height='200' width = '200' >
-		</td>";
+		</a></td>";
 	}
 	
 	echo "</table>";
