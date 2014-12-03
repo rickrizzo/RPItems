@@ -11,7 +11,7 @@
 	$email = $_POST["email"];
 	
 	/*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
-	$link = mysqli_connect("localhost", "root", "mysql44") or die("ERROR: " . mysqli_error($link));
+	$link = mysqli_connect("localhost", "root", "") or die("ERROR: " . mysqli_error($link));
 	
 	//Create DB
 	$dbQuery = "CREATE DATABASE IF NOT EXISTS rpItems";

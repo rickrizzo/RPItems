@@ -32,7 +32,7 @@
 		<br/>
 		
 		<!--List New Item-->
-		<button onclick="window.location.href='/rpitems/newlisting.html'">List New Item</button>
+		<button onclick="window.location.href='newlisting.html'">List New Item</button>
 		
 		<!--Popular Items-->
 		<div id="popular">
@@ -53,11 +53,11 @@
 							echo "<tr>";
 							
 						}
-						echo "<td>
+						echo "<td><a href='productpage.php?item=" . $record['itemName'] . "'>
 							<h5>" . $record['itemName']."</h5>
 							<p>$" . $record['price'] ."</p>
 							<img src = '". $record['img'] ."' height='200' width = '200' >
-							</td>";
+							</a></td>";
 							
 						if($i == 8){
 							break;
