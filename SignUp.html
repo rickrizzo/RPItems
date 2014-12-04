@@ -7,47 +7,47 @@
     <script type="text/javascript" src="JavaScript/SignUpJavascript.js"></script>
   </head>
   <body>
-		<!--Navigation Bar-->
-		<nav>
-			<ul>
-				<li><a href="index.php">RPItems</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="SignUp.html">Sign Up</a></li>
-				<li><a href="login.php">Log In</a></li>
-			</ul>
-		</nav>
+    <!--Navigation Bar-->
+    <nav>
+      <ul>
+        <li><a href="index.php">RPItems</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="SignUp.html">Sign Up</a></li>
+        <li><a href="login.php">Log In</a></li>
+      </ul>
+    </nav>
     <div>
       <h1>RPItems</h1>
-			<h2>A place for students to sell things within the RPI Community</h2>
+      <h2>A place for students to sell things within the RPI Community</h2>
       <div id="description">
-      <br/>
-				<form id="addForm" name="addForm" action="userHandler.php" method="post" onsubmit="return validate(this);">
-					<fieldset> 
-						<legend>Sign Up</legend>
-						<div class="formData">
+        <br/>
+        <form id="addForm" name="addForm" action="userHandler.php" method="post" onsubmit="return validate(this);">
+          <fieldset> 
+            <legend>Sign Up</legend>
+            <div class="formData">
+            
+              <label class="field" for="firstName">First Name:</label>
+              <div class="value"><input type="text" size="60" value="" name="firstName" id="firstName"/></div>
 
-							<label class="field" for="firstName">First Name:</label>
-							<div class="value"><input type="text" size="60" value="" name="firstName" id="firstName"/></div>
+              <label class="field" for="lastName">Last Name:</label>
+              <div class="value"><input type="text" size="60" value="" name="lastName" id="lastName"/></div>
 
-							<label class="field" for="lastName">Last Name:</label>
-							<div class="value"><input type="text" size="60" value="" name="lastName" id="lastName"/></div>
+              <label class="field" for="username">RPI Email Address:</label>
+              <div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
 
-							<label class="field" for="username">RPI Email Address:</label>
-							<div class="value"><input type="text" size="60" value="" name="username" id="username"/></div>
+              <label class="field" for="password">Create Your Password:</label>
+              <div class="value"><input type="password" size="60" value="" name="password" id="password"/></div>
 
-							<label class="field" for="password">Create Your Password:</label>
-							<div class="value"><input type="password" size="60" value="" name="password" id="password"/></div>
+              <label class="field" for="confirmPassword">Confirm Password:</label>
+              <div class="value"><input type="password" size="60" value="" name="confirmPassword" id="confirmPassword"/></div>
 
-							<label class="field" for="confirmPassword">Confirm Password:</label>
-							<div class="value"><input type="password" size="60" value="" name="confirmPassword" id="confirmPassword"/></div>
-
-							<br />
-							<input type="submit" value="Submit" id="Submit" name="Submit"/>
-						</div>
-					</fieldset>
-				</form>
-    		<footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
-    	</div>
+              <br />
+              <input type="submit" value="Submit" id="Submit" name="Submit"/>
+            </div>
+          </fieldset>
+        </form>
+        <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
+      </div>
     </div>
   </body>
 </html>
