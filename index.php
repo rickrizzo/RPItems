@@ -29,6 +29,25 @@
 			<input type="search" id="search" name="search"/>
 			<button type="submit" id="searchSubmit">Search</button>
 		</form>
+		
+		<br/>
+		
+		<form method="post" action="categorySearchHandler.php">
+			<label for="category_select">Or browse by category</label>
+			<br/>
+			<select name="category_select" >
+			  <option value="">Choose...</option>
+              <option value="Books">Books</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Games">Games</option>
+              <option value="Movies">Movies</option>
+			  <option value="Music">Music</option>
+              <option value="Tools">Tool</option>
+              <option value="Other">Others</option>
+			</select>
+			<input type="submit" value="Search"/>
+		</form>
 		<br/>
 		
 		<!--List New Item-->
