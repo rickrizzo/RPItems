@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>RPItems</title>
-	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
-</head>
-<body>
-	<!--Navigation Bar-->
-	<nav>
-		<ul>
-			<li><a href="index.php">RPItems</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="SignUp.html">Sign Up</a></li>
-			<li><a href="login.php">Log In</a></li>
-		</ul>
-	</nav>
+    <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <nav>
+      <ul>
+        <li><a href="index.php">RPItems</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="SignUp.html">Sign Up</a></li>
+        <li><a href="login.php">Log In</a></li>
+      </ul>
+    </nav>
 	
-	<!--Page Header-->
-	<header>
-		<h1>Welcome to RPItems</h1>
-		<h2>A place for students to sell things within the RPI Community</h2>
-	</header>
+    <!--Page Header-->
+    <header>
+      <h1>Welcome to RPItems</h1>
+      <h2>A place for students to sell things within the RPI Community</h2>
+    </header>
 	
-	<!--Search Bar-->
-	<div id="index">
-		<form method="post" action="searchHandler.php">
-			<label for="search">Find what you need<br /></label>
-			<input type="search" id="search" name="search"/>
-			<button type="submit" id="searchSubmit">Search</button>
+    <!--Search Bar-->
+    <div id="index">
+      <form method="post" action="searchHandler.php">
+        <label for="search">Find what you need<br /></label>
+        <input type="search" id="search" name="search"/>
+        <button type="submit" id="searchSubmit">Search</button>
 		</form>
 		
 		<br/>
