@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>RPItems - Search</title>
     <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
     <!--This will have to be populated by the DB-->
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Navigation Bar-->
-	<nav>
-		<ul>
-			<li><a href="index.php">RPItems</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="SignUp.html">Sign Up</a></li>
-			<li><a href="login.php">Log In</a></li>
-		</ul>
-	</nav>
+    <nav>
+      <ul>
+        <li><a href="index.php">RPItems</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="SignUp.html">Sign Up</a></li>
+        <li><a href="login.php">Log In</a></li>
+      </ul>
+    </nav>
 	
-	<!--Header-->
+    <!--Header-->
     <header>
       <h1>Search Results</h1>
-	</header>
+    </header>
 	
-	<div id="index">
-<?php
-	//Get Variable
+    <div id="index">
+      <?php
+        //Get Variable
 	$category = $_POST["category_select"];
 	
 	echo "<h2>Displaying items in " . $category . "</h2>";
@@ -42,28 +42,29 @@
 	
 	//PRINT DATA
 	for($i = 0; $i < $numItems; $i ++){
-		$record = $result->fetch_assoc();
-		if($i % 5 == 0){
-			if($i != 0){
-				echo "</tr>";
-			}
-			echo "<tr>";
-		}
-		echo "<td><a href='productpage.php?item=" . $record['itemName'] . "'>
-		<h5>" . $record['itemName']."</h5>
-		<p>$" . $record['price'] ."</p>
-		<img src = '". $record['img'] ."' height='200' width = '200' >
-		</a></td>";
-	}
+          $record = $result->fetch_assoc();
+          if($i % 5 == 0){
+            if($i != 0){
+              echo "</tr>";
+            }
+            echo "<tr>";
+          }
+          echo "<td><a href='productpage.php?item=" . $record['itemName'] . "'>
+          <h5>" . $record['itemName']."</h5>
+          <p>$" . $record['price'] ."</p>
+          <img src = '". $record['img'] ."' height='200' width = '200' >
+          </a></td>";
+        }
 	
 	echo "</table>";
 	
 	$result->free();
 	$link->close();
-?>
-</div>
+      ?>
+    </div>
 
- <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
+    <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
 
 
-</body>
+  </body>
+</html>
