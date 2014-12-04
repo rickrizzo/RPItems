@@ -2,113 +2,107 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>RPItems - New Listing</title>    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
-	<!--CSS-->
+    <!--CSS-->
     <link href="itemsell.css" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
 
     <!--Scripts-->
     <script type="text/javascript" src="resources/newitemval.js"></script>
   </head>
   <body>
-
-	<!--Navigation Bar-->
-	<nav>
-		<ul>
-			<li><a href="index.php">RPItems</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="SignUp.html">Sign Up</a></li>
-			<li><a href="login.php">Log In</a></li>
-		</ul>
-	</nav>
+    
+    <!--Navigation Bar-->
+    <nav>
+      <ul>
+        <li><a href="index.php">RPItems</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="SignUp.html">Sign Up</a></li>
+        <li><a href="login.php">Log In</a></li>
+      </ul>
+    </nav>
 		
     <!--Header-->
     <header>
       <h1>New Listing</h1>
-			<h2>A place for students to sell things within the RPI Community</h2>
+      <h2>A place for students to sell things within the RPI Community</h2>
     </header>
-
-	<!--Input Data-->
-  <div id = "whitebg">
-    <form id="addForm" name="addForm" action="listinghandler.php" method="post" enctype="multipart/form-data" onsubmit="return validate(this);">
-      <fieldset class="forform"> 
-        <legend>Item Information</legend>
-        <div class= "inside">
-          <div class="formData">
+    
+    <!--Input Data-->
+    <div id = "whitebg">
+      <form id="addForm" name="addForm" action="listinghandler.php" method="post" enctype="multipart/form-data" onsubmit="return validate(this);">
+        <fieldset class="forform"> 
+          <legend>Item Information</legend>
+          <div class= "inside">
+            <div class="formData">
             
-            <!--Catagory-->
-            <label for = "catagory" class="field">Category:</label>
+              <!--Catagory-->
+              <label for = "catagory" class="field">Category:</label>
 
-            <select id = "catagory" name="catagory" required>
+              <select id = "catagory" name="catagory" required>
 
-              <option value=""></option>
-              <option value="Books">Books</option>
-              <option value="Clothing">Clothing</option>
-              <option value="Electronics">Electronics</option>
-              <option value="Games">Games</option>
-              <option value="Movies">Movies</option>
-			  <option value="Music">Music</option>
-              <option value="Tools">Tool</option>
-              <option value="Other">Others</option>
-            </select>
-            <br />
+                <option value=""></option>
+                <option value="Books">Books</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Games">Games</option>
+                <option value="Movies">Movies</option>
+                <option value="Music">Music</option>
+                <option value="Tools">Tool</option>
+                <option value="Other">Others</option>
+              </select>
+              <br />
 
-            <!--Name-->
-            <label for="itemName" class="field">Item Name:</label>
-            <div class="value">
-
-			  <input type="text" size="60" value="" name="itemName" id="itemName" required />
-
-			</div>
+              <!--Name-->
+              <label for="itemName" class="field">Item Name:</label>
+                <div class="value">
+                
+                  <input type="text" size="60" value="" name="itemName" id="itemName" required />
+                </div>
             
-            <!--Price-->
-            <label id = "price" class="field" >Price:</label>
-            <div class="value">
-			  $<input type="number" required size="60"  min = "0" value="" name="price" id="price"/>
-			</div>
+              <!--Price-->
+              <label id = "price" class="field" >Price:</label>
+              <div class="value">
+                $<input type="number" required size="60"  min = "0" value="" name="price" id="price"/>
+              </div>
             
-            <!--Description-->
-            <label id = "description" class="field">Description:</label>
-            <div class="value">
-              <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
+              <!--Description-->
+              <label id = "description" class="field">Description:</label>
+              <div class="value">
+                <textarea rows="4" cols="70" name="description" id="description" placeholder="Write Item description here"></textarea>
+              </div>
+            
+              <!--Image-->
+              <label for="itemPicture">Item URL Picture:</label>
+              <input type="url" name="itemPicture" id="itemPicture" />
+              <!--Server isn't strong enough to handle file uploads reasonably-->
+              <!--<input type="file" name="itemPicture" id="itemPicture" />--> 
             </div>
-            
-            <!--Image-->
-			<label for="itemPicture">Item URL Picture:</label>
-			<input type="url" name="itemPicture" id="itemPicture" />
-			<!--Server isn't strong enough to handle file uploads reasonably-->
-            <!--<input type="file" name="itemPicture" id="itemPicture" />--> 
-          </div>
 
-          <fieldset class="forforminside"> 
-            <legend>Contact Information</legend>
-            <div class= "inside">
+            <fieldset class="forforminside"> 
+              <legend>Contact Information</legend>
+              <div class= "inside">
               
-			  <label  id = "Must" class="field" for="phone">Phone:</label>
-              <div class="value">
-			    <input type="tel" size="60" required value="" name="phone" id="phone"/>
-			  </div>
+                <label  id = "Must" class="field" for="phone">Phone:</label>
+                <div class="value">
+                  <input type="tel" size="60" required value="" name="phone" id="phone"/>
+                </div>
             
-              <label id = "Must" class="field" for="email">Email:</label>
-              <div class="value">
+                <label id = "Must" class="field" for="email">Email:</label>
+                <div class="value">
+                  <input type="email" size="60" required value="" name="email" id="email"/>
+                </div>
+              </div>
+            </fieldset>
 
-			    <input type="email" size="60" required value="" name="email" id="email"/>
-
-
-			  </div>
-
+            <div id = "up">
+              <input type="submit" value="Submit" id="save" name="save" style="font-size: 40px;"/>
             </div>
-          </fieldset>
-
-          <div id = "up">
-            <input type="submit" value="Submit" id="save" name="save" style="font-size: 40px;"/>
           </div>
-        </div>
-      </fieldset>
-    </form>
-    <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
-  </div>
-	
+        </fieldset>
+      </form>
+      <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
+    </div>
   </body>
 </html>
