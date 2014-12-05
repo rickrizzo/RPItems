@@ -1,7 +1,7 @@
 <?php
   $item = $_GET["item"];
   
-  $db = mysqli_connect("localhost", "root", "", "rpitems") or die(mysqli_error($db));
+  include('includes/connect.php');
   $query = "SELECT * FROM items WHERE itemName LIKE '$item' LIMIT 1";
   $result = $db->query($query);
   $itemResult = mysqli_fetch_assoc($result);
@@ -13,6 +13,7 @@
     <meta charset='utf-8' />
     <title> " . $itemResult['itemName'] ." </title>
     <link rel='stylesheet' type='text/css' href='resources/stylesheet.css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
     <body>
       <!--Navigation Bar-->
@@ -63,11 +64,11 @@
 	    <a href='#'>Contact Seller</a>
           </div>
         </div>
-
-        <footer>
-          <small>&copy; 2014 copyright RPITEM Group</small>
-        </footer>
       </div>
+	  
+	  <footer>
+        <small>&copy; 2014 copyright RPITEM Group</small>
+      </footer>
     </body>
   </html>"
 

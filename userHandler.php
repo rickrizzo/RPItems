@@ -6,36 +6,37 @@
   $password = $_POST["password"];
   
   /*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
-  $link = mysqli_connect("localhost", "root", "mysql44") or die("ERROR: " . mysqli_error($link));
+  include('includes/connect.php');
   
   //Create DB
   $dbQuery = "CREATE DATABASE IF NOT EXISTS rpItems";
-  $db = $link->query($dbQuery) or die ("DB ERROR: " . mysqli_error($link));
+  $database = $db->query($dbQuery) or die ("DB ERROR: " . mysqli_error($db));
   
   //Create Items Table
-  $link->select_db("rpItems") or die(mysqli_error());
-  $link->query("CREATE TABLE IF NOT EXISTS members (
+  $db->select_db("rpItems") or die(mysqli_error());
+  $db->query("CREATE TABLE IF NOT EXISTS members (
     id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
     firstName VARCHAR(30) NOT NULL,
     lastName VARCHAR(30) NOT NULL,
     email VARCHAR(40) NOT NULL,
     password VARCHAR(30) NOT NULL,
     PRIMARY KEY(id)
-  )") or die("TABLE ERROR: " . mysqli_error($link));
+  )") or die("TABLE ERROR: " . mysqli_error($db));
   
   //Insert Information
   $strSQL = "INSERT INTO members(firstName, lastName, email, password)";
   $strSQL .= "VALUES('" . $fname . "', '" . $lname . "', '" . $email . "', '";
   $strSQL .= $password . "')";
-  $insert = mysqli_query($link, $strSQL) or die ("INSERT ERROR: " . mysqli_error($link));
+  $insert = mysqli_query($db, $strSQL) or die ("INSERT ERROR: " . mysqli_error($db));
   
-  $link->close();  
+  $db->close();  
 ?>
 
 <html>
   <head>
     <title>User Created</title>
     <link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <h1>Thank You!</h1>

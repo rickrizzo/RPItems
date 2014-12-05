@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>RPItems - Search</title>
     <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
-    <!--This will have to be populated by the DB-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -27,21 +27,20 @@
     <div id="index">
       <?php
         //Get Variable
-	$category = $_POST["category_select"];
+	    $category = $_POST["category_select"];
+	    echo "<h2>Displaying items in " . $category . "</h2>";
 	
-	echo "<h2>Displaying items in " . $category . "</h2>";
+	    /*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
+	    include('includes/connect.php');
 	
-	/*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
-	$link = mysqli_connect("localhost", "root", "", "rpItems") or die("ERROR: " . mysqli_error($link));
+	    $query = "SELECT * FROM items WHERE catagory='$category'";
+	    $result = $db->query($query);
+	    $numItems = $result->num_rows;
 	
-	$query = "SELECT * FROM items WHERE catagory='$category'";
-	$result = $link->query($query);
-	$numItems = $result->num_rows;
+	    echo "<table>";
 	
-	echo "<table>";
-	
-	//PRINT DATA
-	for($i = 0; $i < $numItems; $i ++){
+	    //PRINT DATA
+	    for($i = 0; $i < $numItems; $i ++){
           $record = $result->fetch_assoc();
           if($i % 5 == 0){
             if($i != 0){
@@ -56,10 +55,10 @@
           </a></td>";
         }
 	
-	echo "</table>";
+	    echo "</table>";
 	
-	$result->free();
-	$link->close();
+	    $result->free();
+	    $db->close();
       ?>
     </div>
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>RPItems - Search</title>
     <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
-    <!--This will have to be populated by the DB-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -32,10 +32,10 @@
         echo "<h2>Displaying results for \"" . $search . "\"</h2>";
         
         /*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
-        $link = mysqli_connect("localhost", "root", "", "rpItems") or die("ERROR: " . mysqli_error($link));
+        include('includes/connect.php');
         
         $query = "SELECT * FROM items WHERE itemName LIKE '%$search%'";
-        $result = $link->query($query);
+        $result = $db->query($query);
         $numItems = $result->num_rows;
         
         echo "<table>";
@@ -59,7 +59,7 @@
         echo "</table>";
         
         $result->free();
-        $link->close();
+        $db->close();
       ?>
     </div>
 

@@ -7,6 +7,7 @@
     <!--CSS-->
     <link href="itemsell.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="resources/stylesheet.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <!--Scripts-->
     <script type="text/javascript" src="resources/newitemval.js"></script>
@@ -75,23 +76,17 @@
             
               <!--Image-->
               <label for="itemPicture">Item URL Picture:</label>
-              <input type="url" name="itemPicture" id="itemPicture" />
-              <!--Server isn't strong enough to handle file uploads reasonably-->
-              <!--<input type="file" name="itemPicture" id="itemPicture" />--> 
+              <input type="url" name="itemPicture" id="itemPicture" required />
+			  <br/>Ideal dimensions: 400px x 400px
             </div>
 
             <fieldset class="forforminside"> 
               <legend>Contact Information</legend>
               <div class= "inside">
-              
-                <label  id = "Must" class="field" for="phone">Phone:</label>
-                <div class="value">
-                  <input type="tel" size="60" required value="" name="phone" id="phone"/>
-                </div>
             
-                <label id = "Must" class="field" for="email">Email:</label>
+                <label id = "Must" class="field" for="email">Secondary Email (optional):</label>
                 <div class="value">
-                  <input type="email" size="60" required value="" name="email" id="email"/>
+                  <input type="email" size="60" value="" name="email" id="email"/>
                 </div>
               </div>
             </fieldset>
@@ -102,7 +97,8 @@
           </div>
         </fieldset>
       </form>
+	</div>
       <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
-    </div>
+    
   </body>
 </html>

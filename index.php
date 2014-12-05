@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>RPItems</title>
     <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <!--Navigation Bar-->
@@ -55,35 +56,38 @@
       
       <!--Popular Items-->
       <div id="popular">
-        <h3>Popular Items</h3>
         <table>
           <?php
-            $db = mysqli_connect('localhost', 'root', '', 'rpitems') or die(mysqli_error($db));
-            $query = 'select * from items';
-            $result = $db->query($query);
-            $numItems = $result->num_rows;
-            
-            for($i = 0; $i < $numItems; $i ++){
-              $record = $result->fetch_assoc();
-              if($i % 5 == 0){
-                if($i != 0){
-                  echo "</tr>";
-                }
-                echo "<tr>";
-              }
-              echo "<td><a href='productpage.php?item=" . $record['itemName'] . "'>
-              <h5>" . $record['itemName']."</h5>
-              <p>$" . $record['price'] ."</p>
-              <img src = '". $record['img'] ."' height='200' width = '200' >
-              </a></td>";
+			include('includes/connect.php');
+			if($db){
+              $query = 'select * from items';
+              $result = $db->query($query);
+              $numItems = $result->num_rows;
+			  
+			  echo "<h3>Popular Items</h3>";
+			  
+              for($i = 0; $i < $numItems; $i ++){
+                $record = $result->fetch_assoc();
+                if($i % 5 == 0){
+                  if($i != 0){
+                    echo "</tr>";
+                  }
+                    echo "<tr>";
+                  }
+                  echo "<td><a href='productpage.php?item=" . $record['itemName'] . "'>
+                  <h5>" . $record['itemName']."</h5>
+                  <p>$" . $record['price'] ."</p>
+                  <img src = '". $record['img'] ."' height='200' width = '200' >
+                  </a></td>";
                 
-              if($i == 8){
-                break;
-              }
-            }
+                  if($i == 8){
+                    break;
+                  }
+                } 
             
-            $result->free();
-            $db->close();
+              $result->free();
+              $db->close();
+			}
           ?>
         </table>
       </div>

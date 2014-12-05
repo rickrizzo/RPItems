@@ -1,7 +1,7 @@
 <?php
   //Connect to DB
   $dbOK = false;
-  @ $db = new mysqli('localhost', 'root', 'mysql44', 'rpitems');
+  include('includes/connect.php');
   if ($db->connect_error) {
     echo '<div class="messages">Could not connect to the database. Error: ';
     echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
@@ -37,44 +37,46 @@
     <!--<script type="text/javascript" src="JavaScript/LogInJavascript.js"></script>-->
   </head>
   <body>
-    <div>
-      <!--Navigation Bar-->
-      <nav>
-        <ul>
-          <li><a href="index.php">RPItems</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="SignUp.html">Sign Up</a></li>
-          <li><a href="login.php">Log In</a></li>
-        </ul>
-      </nav>
-      <h1>RPItems</h1>
-      <div id="description">
-        <div id="itemLogo">
-          <img src="resources/logo.jpg" id="logo"/>
-        </div>
-        <form id="addForm" name="addForm" action="login.php" method="post" onsubmit="return validate(this);">
-          <fieldset> 
-            <legend>Log In</legend>
-            <div class="formData">
-                          
-              <label class="field" for="username">RPI Email Address:</label>
-              <div class="value">
-                <input type="email" size="60" value="" name="username" id="username" required/>
-              </div>
-              
-              <label class="field" for="password">Password:</label>
-              <div class="value">
-                <input type="password" size="60" name="password" value="" id="password" required/>
-              </div>
-              
-              <div class = "submited">
-                <input type="submit" value="Submit" id="Submit" name="Submit"/>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+
+    <!--Navigation Bar-->
+    <nav>
+      <ul>
+        <li><a href="index.php">RPItems</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="SignUp.html">Sign Up</a></li>
+        <li><a href="login.php">Log In</a></li>
+      </ul>
+    </nav>
+    <h1>RPItems</h1>
+    <div id="description">
+      <div id="itemLogo">
+        <img src="resources/logo.jpg" id="logo"/>
       </div>
+      <form id="addForm" name="addForm" action="login.php" method="post" onsubmit="return validate(this);">
+        <fieldset> 
+          <legend>Log In</legend>
+          <div class="formData">
+                          
+            <label class="field" for="username">RPI Email Address:</label>
+            <div class="value">
+              <input type="email" size="60" value="" name="username" id="username" required/>
+            </div>
+              
+            <label class="field" for="password">Password:</label>
+            <div class="value">
+              <input type="password" size="60" name="password" value="" id="password" required/>
+            </div>
+              
+            <div class = "submited">
+              <input type="submit" value="Submit" id="Submit" name="Submit"/>
+            </div>
+          </div>
+        </fieldset>
+      </form>
     </div>
-    <footer><small>&copy; 2014 copyright RPITEM Group</small></footer>
+	
+    <footer>
+	  <small>&copy; 2014 copyright RPITEM Group</small>
+	</footer>
   </body>
 </html>

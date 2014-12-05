@@ -7,7 +7,6 @@
   $img = $_POST["itemPicture"];
   
   //Contact Information
-  $phone = $_POST["phone"];
   $email = $_POST["email"];
   
   /*DO NOT FORGET TO PUT THIS ON YOUR LOCAL HOST AND ADD YOUR INFORMATION*/
@@ -26,14 +25,15 @@
     catagory VARCHAR(30) NOT NULL,
     price FLOAT(6, 2) NOT NULL,
     description VARCHAR(400),
+    email VARCHAR(30),
     img VARCHAR(200),
     PRIMARY KEY(id)
   )") or die("TABLE ERROR: " . mysqli_error($link));
   
   //Insert Information
-  $strSQL = "INSERT INTO items(itemName, catagory, price, description, img)";
+  $strSQL = "INSERT INTO items(itemName, catagory, price, description, email, img)";
   $strSQL .= "VALUES('" . $item . "', '" . $catagory . "', '" . $price . "', '";
-  $strSQL .= $description . "', '" . $img . "')";
+  $strSQL .= $description . "', '" . $email . "', '" . $img . "')";
   $insert = mysqli_query($link, $strSQL) or die ("INSERT ERROR: " . mysqli_error($link));
   
   $link->close();

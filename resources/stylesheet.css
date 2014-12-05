@@ -59,6 +59,14 @@ h1{
   margin: 0 auto;
 }
 
+#popular h3{
+  background-color: white;
+  width: 100px;
+  margin: 20px auto;
+  border-radius: 50px;
+
+}
+
 #index td{
   background-color:white;
   opacity: 0.7;
@@ -100,7 +108,7 @@ h1{
   float:left;
   width: 600px;
   clear:left;
-  padding: 0px 0px 20px 0px;
+  padding:0 0 20px 0;
 }
 #profileImage{
   width: 300px;
@@ -226,11 +234,6 @@ form{
   display:block;
 }
 
-footer{
-  padding: 30px 0px 20px 0px;
-  text-align: center;
-}
-
 /*login*/
 .formData{
   line-height:40px;
@@ -293,6 +296,28 @@ p{
 #whitebg{
   width: 875px;
   background-color: white;
-  margin: auto;
+  margin: 20px auto;
+  padding: 10px;
   border-radius: 20px;
+}
+
+/*Footer*/
+footer{
+  margin: 20px;
+}
+
+footer p {
+  margin: 20px auto;
+  padding: 10px 0 10px 0;
+  text-align:center;
+  background-color: white;
+  border-radius: 40px;
+}
+
+footer small{
+  margin: 20px auto;
+  padding: 10px 0 10px 0;
+  text-align:center;
+  background-color: white;
+  border-radius: 40px;
 }
